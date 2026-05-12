@@ -1,6 +1,6 @@
 export function LocationSection() {
   return (
-    <section className="w-full bg-white py-24 font-sans">
+    <section className="w-full bg-white py-24 font-sans" id="localizacao">
       <div className="mx-auto flex max-w-7xl flex-col gap-12 px-8 md:flex-row md:items-center md:px-16">
         <div className="flex flex-1 flex-col justify-center p-4 md:p-8">
           <h2 className="mb-6 font-sans text-3xl font-extrabold tracking-tight text-[#304439] md:text-4xl">
