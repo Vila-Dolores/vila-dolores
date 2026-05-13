@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { Link } from "react-router";
 
 const galleries = {
   areia: [
@@ -162,12 +163,12 @@ export function AccommodationsCarousel() {
                   <p className="font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
                     Perfeita para quem quer chegar, acomodar tudo direitinho e aproveitar o mar sem preocupações.
                   </p>
-                  <button
-                    type="button"
+                  <Link
+                    to="/acomodacoes#areia"
                     className="self-start rounded-md bg-[#304439] px-10 py-4 font-sans text-base font-bold text-[#FFD2A2] transition hover:brightness-110"
                   >
-                    Reservar
-                  </button>
+                    Ver Mais
+                  </Link>
                 </div>
               </div>
               <div 
@@ -278,12 +279,12 @@ export function AccommodationsCarousel() {
                   <p className="font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
                     O ambiente perfeito para churrascos, risadas e bons momentos ao ar livre.
                   </p>
-                  <button
-                    type="button"
+                  <Link
+                    to="/acomodacoes#mare"
                     className="self-start rounded-md bg-[#304439] px-10 py-4 font-sans text-base font-bold text-[#FFD2A2] transition hover:brightness-110"
                   >
-                    Reservar
-                  </button>
+                    Ver Mais
+                  </Link>
                 </div>
               </div>
             </div>
@@ -364,12 +365,12 @@ export function AccommodationsCarousel() {
                   <p className="font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
                     O espaço ideal para quem quer conforto e a liberdade de aproveitar o dia e a noite no seu próprio rooftop.
                   </p>
-                  <button
-                    type="button"
+                  <Link
+                    to="/acomodacoes#horizonte"
                     className="self-start rounded-md bg-[#304439] px-10 py-4 font-sans text-base font-bold text-[#FFD2A2] transition hover:brightness-110"
                   >
-                    Reservar
-                  </button>
+                    Ver Mais
+                  </Link>
                 </div>
               </div>
               <div 
@@ -480,12 +481,12 @@ export function AccommodationsCarousel() {
                   <p className="font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
                     O espaço ideal para quem quer conforto e a liberdade de aproveitar o dia e a noite no seu próprio rooftop.
                   </p>
-                  <button
-                    type="button"
+                  <Link
+                    to="/acomodacoes#brisa"
                     className="self-start rounded-md bg-[#304439] px-10 py-4 font-sans text-base font-bold text-[#FFD2A2] transition hover:brightness-110"
                   >
-                    Reservar
-                  </button>
+                    Ver Mais
+                  </Link>
                 </div>
               </div>
             </div>

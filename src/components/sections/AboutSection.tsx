@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export function AboutSection() {
   return (
     <section className="w-full bg-[#304439] py-24 font-sans">
@@ -15,10 +17,15 @@ export function AboutSection() {
               HOUSE APARTMENTS
             </h2>
             <p className="mb-4 font-sans text-lg font-medium leading-relaxed text-white/80">
-              A Vila Dolores é um conjunto exclusivo de quatro house apartments que unem o conforto e a privacidade de uma casa à praticidade e funcionalidade de um loft moderno.
+              A Vila Dolores é um conjunto exclusivo de quatro house apartments
+              que unem o conforto e a privacidade de uma casa à praticidade e
+              funcionalidade de um loft moderno.
             </p>
             <p className="mb-6 font-sans text-lg font-medium leading-relaxed text-white/80">
-              Cada unidade foi cuidadosamente projetada para oferecer ambientes amplos, equipados e acolhedores, que equilibram design e aconchego, ideais para quem busca dias de descanso e diversão com a família ou amigos.
+              Cada unidade foi cuidadosamente projetada para oferecer ambientes
+              amplos, equipados e acolhedores, que equilibram design e
+              aconchego, ideais para quem busca dias de descanso e diversão com
+              a família ou amigos.
             </p>
             <p className="font-sans text-lg font-bold text-[#FFD2A2]">
               Veja em "Nossas Acomodações" a configuração ideal para você!
@@ -32,20 +39,24 @@ export function AboutSection() {
               A PRAIA
             </h2>
             <p className="mb-4 font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
-              Com mais de 3 km de extensão, Juquehy tem ampla faixa de areia branca e fina, um mar azul transparente e um pôr do sol que convida a ficar na praia.
+              Com mais de 3 km de extensão, Juquehy tem ampla faixa de areia
+              branca e fina, um mar azul transparente e um pôr do sol que
+              convida a ficar na praia.
             </p>
             <p className="mb-4 font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
-              Do surf à tranquilidade de um banho de mar delicioso, a praia ainda atrai esportistas que gostam de correr, jogar bola, frescobol e andar de bike.
+              Do surf à tranquilidade de um banho de mar delicioso, a praia
+              ainda atrai esportistas que gostam de correr, jogar bola,
+              frescobol e andar de bike.
             </p>
             <p className="mb-8 font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
               Ambiente familiar que vai encantar você!
             </p>
-            <button
-              type="button"
+            <Link
+              to="/acomodacoes"
               className="self-start rounded-md bg-[#304439] px-7 py-4 font-sans text-base font-bold text-[#FFD2A2] transition hover:brightness-110"
             >
               FAÇA SUA RESERVA
-            </button>
+            </Link>
           </div>
           <div className="order-1 relative h-[400px] w-full overflow-hidden rounded-xl md:order-2 md:h-[500px]">
             <img
