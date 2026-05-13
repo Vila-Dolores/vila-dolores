@@ -25,9 +25,11 @@ const galleries = {
   ],
 };
 
+type ActiveGalleryType = { id: string; images: string[] };
+
 export function AccommodationsCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [activeGallery, setActiveGallery] = useState<string[] | null>(null);
+  const [activeGallery, setActiveGallery] = useState<ActiveGalleryType | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const scroll = (direction: "left" | "right") => {
@@ -53,19 +55,32 @@ export function AccommodationsCarousel() {
     container.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
 
-  const openGallery = (images: string[]) => {
-    setActiveGallery(images);
+  const openGallery = (id: string, images: string[]) => {
+    setActiveGallery({ id, images });
     setCurrentImageIndex(0);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeGallery = () => {
+    setActiveGallery(null);
+    document.body.style.overflow = "unset";
   };
 
   const nextImage = () => {
     if (!activeGallery) return;
-    setCurrentImageIndex((prev) => (prev === activeGallery.length - 1 ? 0 : prev + 1));
+    if (currentImageIndex < activeGallery.images.length) {
+      setCurrentImageIndex((prev) => prev + 1);
+    }
   };
 
   const prevImage = () => {
     if (!activeGallery) return;
-    setCurrentImageIndex((prev) => (prev === 0 ? activeGallery.length - 1 : prev - 1));
+    if (currentImageIndex > 0) {
+      setCurrentImageIndex((prev) => prev - 1);
+    }
+    if (currentImageIndex === 0) {
+      setCurrentImageIndex(activeGallery.images.length);
+    }
   };
 
   return (
@@ -94,9 +109,9 @@ export function AccommodationsCarousel() {
           className="flex w-full snap-x snap-mandatory overflow-x-auto scroll-smooth [&::-webkit-scrollbar]:hidden"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          <div className="w-full shrink-0 snap-center bg-[#FAF9F6] py-24 flex">
+          <div className="flex w-full shrink-0 snap-center bg-[#FAF9F6] py-24">
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-14 md:flex-row md:items-center md:px-24">
-              <div className="flex flex-1 flex-col justify-start h-full">
+              <div className="flex h-full flex-1 flex-col justify-start">
                 <p className="mb-2 font-sans text-sm font-bold uppercase tracking-[0.2em] text-[#81AF8E]">
                   Nossas acomodações
                 </p>
@@ -172,8 +187,8 @@ export function AccommodationsCarousel() {
                 </div>
               </div>
               <div 
-                className="hidden md:block group relative h-[600px] w-full flex-1 cursor-pointer overflow-hidden rounded-xl shadow-xl md:h-[800px]"
-                onClick={() => openGallery(galleries.areia)}
+                className="group relative hidden h-[600px] w-full flex-1 cursor-pointer overflow-hidden rounded-xl shadow-xl md:block md:h-[800px]"
+                onClick={() => openGallery("areia", galleries.areia)}
               >
                 <img
                   src={galleries.areia[0]}
@@ -189,11 +204,11 @@ export function AccommodationsCarousel() {
             </div>
           </div>
 
-          <div className="w-full shrink-0 snap-center bg-[#FFD2A2] py-24 flex">
+          <div className="flex w-full shrink-0 snap-center bg-[#FFD2A2] py-24">
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-14 md:flex-row md:items-center md:px-24">
               <div 
-                className="hidden md:block group relative h-[600px] w-full flex-1 cursor-pointer overflow-hidden rounded-xl shadow-xl md:h-[800px]"
-                onClick={() => openGallery(galleries.mare)}
+                className="group relative hidden h-[600px] w-full flex-1 cursor-pointer overflow-hidden rounded-xl shadow-xl md:block md:h-[800px]"
+                onClick={() => openGallery("mare", galleries.mare)}
               >
                 <img
                   src={galleries.mare[0]}
@@ -206,7 +221,7 @@ export function AccommodationsCarousel() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-1 flex-col justify-start h-full md:pl-8">
+              <div className="flex h-full flex-1 flex-col justify-start md:pl-8">
                 <p className="mb-2 font-sans text-sm font-bold uppercase tracking-[0.2em] text-[#81AF8E]">
                   Nossas acomodações
                 </p>
@@ -290,9 +305,9 @@ export function AccommodationsCarousel() {
             </div>
           </div>
 
-          <div className="w-full shrink-0 snap-center bg-[#FAF9F6] py-24 flex">
+          <div className="flex w-full shrink-0 snap-center bg-[#FAF9F6] py-24">
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-14 md:flex-row md:items-center md:px-24">
-              <div className="flex flex-1 flex-col justify-start h-full">
+              <div className="flex h-full flex-1 flex-col justify-start">
                 <p className="mb-2 font-sans text-sm font-bold uppercase tracking-[0.2em] text-[#81AF8E]">
                   Nossas acomodações
                 </p>
@@ -374,8 +389,8 @@ export function AccommodationsCarousel() {
                 </div>
               </div>
               <div 
-                className="hidden md:block group relative h-[600px] w-full flex-1 cursor-pointer overflow-hidden rounded-xl shadow-xl md:h-[800px]"
-                onClick={() => openGallery(galleries.horizonte)}
+                className="group relative hidden h-[600px] w-full flex-1 cursor-pointer overflow-hidden rounded-xl shadow-xl md:block md:h-[800px]"
+                onClick={() => openGallery("horizonte", galleries.horizonte)}
               >
                 <img
                   src={galleries.horizonte[0]}
@@ -391,11 +406,11 @@ export function AccommodationsCarousel() {
             </div>
           </div>
 
-          <div className="w-full shrink-0 snap-center bg-[#FFD2A2] py-24 flex">
+          <div className="flex w-full shrink-0 snap-center bg-[#FFD2A2] py-24">
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-14 md:flex-row md:items-center md:px-24">
               <div 
-                className="hidden md:block group relative h-[600px] w-full flex-1 cursor-pointer overflow-hidden rounded-xl shadow-xl md:h-[800px]"
-                onClick={() => openGallery(galleries.brisa)}
+                className="group relative hidden h-[600px] w-full flex-1 cursor-pointer overflow-hidden rounded-xl shadow-xl md:block md:h-[800px]"
+                onClick={() => openGallery("brisa", galleries.brisa)}
               >
                 <img
                   src={galleries.brisa[0]}
@@ -408,7 +423,7 @@ export function AccommodationsCarousel() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-1 flex-col justify-start h-full md:pl-8">
+              <div className="flex h-full flex-1 flex-col justify-start md:pl-8">
                 <p className="mb-2 font-sans text-sm font-bold uppercase tracking-[0.2em] text-[#81AF8E]">
                   Nossas acomodações
                 </p>
@@ -497,10 +512,10 @@ export function AccommodationsCarousel() {
       {activeGallery && (
         <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm md:p-12">
           <button
-            onClick={() => setActiveGallery(null)}
-            className="absolute right-6 top-6 text-white transition hover:scale-110 hover:text-[#FFD2A2]"
+            onClick={closeGallery}
+            className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition hover:scale-110 hover:bg-[#FFD2A2] hover:text-[#304439]"
           >
-            <X className="h-10 w-10" />
+            <X className="h-6 w-6" />
           </button>
           
           <button
@@ -509,19 +524,34 @@ export function AccommodationsCarousel() {
           >
             <ChevronLeft className="h-12 w-12" />
           </button>
+
+          {currentImageIndex < activeGallery.images.length && (
+            <img
+              src={activeGallery.images[currentImageIndex]}
+              alt={`Galeria de fotos ${currentImageIndex + 1}`}
+              className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
+            />
+          )}
+
+          {currentImageIndex === activeGallery.images.length && (
+            <div className="relative flex aspect-video w-full max-w-5xl items-center justify-center overflow-hidden rounded-xl bg-black/50 shadow-2xl backdrop-blur-lg">
+              <Link
+                to={`/acomodacoes?gallery=${activeGallery.id}`}
+                className="font-sans text-xl font-bold text-[#FFD2A2] underline underline-offset-8 transition hover:text-white md:text-3xl"
+              >
+                Ver todas as fotos
+              </Link>
+            </div>
+          )}
           
-          <img
-            src={activeGallery[currentImageIndex]}
-            alt={`Galeria de fotos ${currentImageIndex + 1}`}
-            className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
-          />
-          
-          <button
-            onClick={nextImage}
-            className="absolute right-6 top-1/2 -translate-y-1/2 text-white transition hover:scale-110 hover:text-[#FFD2A2]"
-          >
-            <ChevronRight className="h-12 w-12" />
-          </button>
+          {currentImageIndex < activeGallery.images.length && (
+            <button
+              onClick={nextImage}
+              className="absolute right-6 top-1/2 -translate-y-1/2 text-white transition hover:scale-110 hover:text-[#FFD2A2]"
+            >
+              <ChevronRight className="h-12 w-12" />
+            </button>
+          )}
         </div>
       )}
     </>

@@ -12,7 +12,9 @@ import {
   Ruler,
   Users,
   Droplets,
-  X
+  X,
+  ChevronLeft,
+  ChevronRight
 } from "lucide-react";
 import { accommodationsData } from "../data/accommodations";
 import { Header } from "../components/layout/Header";
@@ -31,8 +33,10 @@ const iconMap = {
 };
 
 export function Acomodacoes() {
-  const { hash } = useLocation();
+  const { hash, search } = useLocation();
   const [activeVideoUrl, setActiveVideoUrl] = useState<string | null>(null);
+  const [activeGallery, setActiveGallery] = useState<string[] | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const element = hash
@@ -43,6 +47,19 @@ export function Acomodacoes() {
     }
   }, [hash]);
 
+  useEffect(() => {
+    const params = new URLSearchParams(search);
+    const galleryId = params.get("gallery");
+    if (galleryId) {
+      const acc = accommodationsData.find((a) => a.id === galleryId);
+      if (acc) {
+        setActiveGallery(acc.images);
+        setCurrentImageIndex(0);
+        document.body.style.overflow = "hidden";
+      }
+    }
+  }, [search]);
+
   const openVideoModal = (url: string) => {
     setActiveVideoUrl(url);
     document.body.style.overflow = "hidden";
@@ -51,6 +68,27 @@ export function Acomodacoes() {
   const closeVideoModal = () => {
     setActiveVideoUrl(null);
     document.body.style.overflow = "unset";
+  };
+
+  const openGallery = (images: string[]) => {
+    setActiveGallery(images);
+    setCurrentImageIndex(0);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeGallery = () => {
+    setActiveGallery(null);
+    document.body.style.overflow = "unset";
+  };
+
+  const nextImage = () => {
+    if (!activeGallery) return;
+    setCurrentImageIndex((prev) => (prev + 1) % activeGallery.length);
+  };
+
+  const prevImage = () => {
+    if (!activeGallery) return;
+    setCurrentImageIndex((prev) => (prev - 1 + activeGallery.length) % activeGallery.length);
   };
 
   return (
@@ -121,14 +159,25 @@ export function Acomodacoes() {
                 className={`flex flex-col gap-12 lg:items-center ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"}`}
               >
                 <div className="w-full flex-1">
-                  <div className="relative h-[450px] overflow-hidden rounded-3xl shadow-2xl md:h-[650px]">
+                  <div 
+                    className="group relative h-[450px] cursor-pointer overflow-hidden rounded-3xl shadow-2xl md:h-[650px]"
+                    onClick={() => openGallery(acc.images)}
+                  >
                     <img
                       src={acc.images[0]}
                       alt={acc.name}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-500 group-hover:bg-black/20">
+                      <p className="translate-y-4 font-sans text-lg font-bold text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                        Ver Galeria
+                      </p>
+                    </div>
                     <button 
-                      onClick={() => openVideoModal("https://www.youtube.com/embed/WIfiR1yENi8?autoplay=1&modestbranding=1&rel=0")}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        openVideoModal("https://www.youtube.com/embed/WIfiR1yENi8?autoplay=1&modestbranding=1&rel=0");
+                      }}
                       className="absolute bottom-6 right-6 flex items-center gap-2 rounded-full bg-[#304439]/90 px-6 py-3 text-sm font-bold text-[#FFD2A2] backdrop-blur-md transition hover:scale-105"
                     >
                       <Play className="h-4 w-4 fill-current" />
@@ -235,6 +284,36 @@ export function Acomodacoes() {
         </div>
       )}
 
+      {activeGallery && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm md:p-12">
+          <button
+            onClick={closeGallery}
+            className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition hover:scale-110 hover:bg-[#FFD2A2] hover:text-[#304439]"
+          >
+            <X className="h-6 w-6" />
+          </button>
+          
+          <button
+            onClick={prevImage}
+            className="absolute left-6 top-1/2 -translate-y-1/2 text-white transition hover:scale-110 hover:text-[#FFD2A2]"
+          >
+            <ChevronLeft className="h-12 w-12" />
+          </button>
+          
+          <img
+            src={activeGallery[currentImageIndex]}
+            alt={`Galeria ${currentImageIndex + 1}`}
+            className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
+          />
+          
+          <button
+            onClick={nextImage}
+            className="absolute right-6 top-1/2 -translate-y-1/2 text-white transition hover:scale-110 hover:text-[#FFD2A2]"
+          >
+            <ChevronRight className="h-12 w-12" />
+          </button>
+        </div>
+      )}
     </div>
   );
 }

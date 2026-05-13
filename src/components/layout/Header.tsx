@@ -77,11 +77,13 @@ export function Header() {
       </div>
 
       <div className="md:absolute md:left-1/2 md:top-0 md:-translate-x-1/2 md:translate-y-4 flex h-20 w-32 items-center justify-center max-w-full md:h-32 md:w-48 lg:h-48 lg:w-64">
-        <img
-          src="/images/logo-original.png"
-          alt="Vila Dolores"
-          className="h-full w-full object-contain"
-        />
+        <Link to="/" className="block h-full w-full transition hover:opacity-80">
+          <img
+            src="/logo-original.png"
+            alt="Vila Dolores"
+            className="h-full w-full object-contain"
+          />
+        </Link>
       </div>
 
       <Link
