@@ -3,12 +3,12 @@ import path from 'path'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
-function figmaAssetResolver() {
+function vilaDoloresAssetResolver() {
   return {
-    name: 'figma-asset-resolver',
+    name: 'vila-dolores-asset-resolver',
     resolveId(id: string) {
-      if (id.startsWith('figma:asset/')) {
-        const filename = id.replace('figma:asset/', '')
+      if (id.startsWith('vila:asset/')) {
+        const filename = id.replace('vila:asset/', '')
         return path.resolve(__dirname, 'src/assets', filename)
       }
     },
@@ -17,7 +17,7 @@ function figmaAssetResolver() {
 
 export default defineConfig({
   plugins: [
-    figmaAssetResolver(),
+    vilaDoloresAssetResolver(),
     react(),
     tailwindcss(),
   ],

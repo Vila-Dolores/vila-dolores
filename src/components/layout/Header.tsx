@@ -2,25 +2,11 @@ import { X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router";
 
-interface HeaderProps {
-  theme?: "dark" | "light" | "glass";
-}
-
-export function Header({ theme = "dark" }: HeaderProps) {
+export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const headerClass =
-    theme === "glass"
-      ? "relative z-50 flex w-full items-start justify-between px-6 py-6 md:absolute md:top-0 md:px-8 bg-[#FAF9F6]/80 backdrop-blur-md shadow-sm"
-      : "relative z-50 flex w-full items-start justify-between px-6 py-6 md:absolute md:top-0 md:px-8";
-
-  const logoClass =
-    theme === "light"
-      ? "h-full w-full object-contain brightness-0 invert"
-      : "h-full w-full object-contain";
-
   return (
-    <header className={headerClass}>
+    <header className="relative z-50 flex w-full items-start justify-between px-6 py-6 md:absolute md:top-0 md:px-8">
       <div className="relative">
         <button
           type="button"
@@ -94,7 +80,7 @@ export function Header({ theme = "dark" }: HeaderProps) {
         <img
           src="/images/logo-original.png"
           alt="Vila Dolores"
-          className={logoClass}
+          className="h-full w-full object-contain"
         />
       </div>
 
