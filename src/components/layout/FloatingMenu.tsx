@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { MessageCircle, Home, MapPin, Calendar, Plus, X } from "lucide-react";
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 
 export function FloatingMenu() {
   const [isVisible, setIsVisible] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const footer = document.querySelector("footer");
@@ -13,9 +15,7 @@ export function FloatingMenu() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(!entry.isIntersecting);
-        if (entry.isIntersecting) {
-          setIsOpen(false);
-        }
+        if (entry.isIntersecting) setIsOpen(false);
       },
       {
         root: null,
@@ -36,7 +36,7 @@ export function FloatingMenu() {
           : "pointer-events-none translate-y-20 opacity-0"
       }`}
     >
-      <div className="flex md:hidden flex-col items-end gap-3">
+      <div className="flex flex-col items-end gap-3 md:hidden">
         {isOpen && (
           <div className="flex flex-col items-end gap-3 pb-2">
             <a
@@ -45,7 +45,7 @@ export function FloatingMenu() {
               onClick={() => setIsOpen(false)}
             >
               <span className="rounded-md bg-[#304439]/90 px-3 py-1 font-sans text-xs font-semibold text-[#FFD2A2] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                Localização
+                {t("common.navigation.location")}
               </span>
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#304439] text-[#FFD2A2] shadow-lg">
                 <MapPin className="h-5 w-5" />
@@ -59,7 +59,7 @@ export function FloatingMenu() {
               onClick={() => setIsOpen(false)}
             >
               <span className="rounded-md bg-[#304439]/90 px-3 py-1 font-sans text-xs font-semibold text-[#FFD2A2] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                Airbnb
+                {t("common.navigation.airbnb")}
               </span>
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#304439] text-[#FFD2A2] shadow-lg">
                 <Home className="h-5 w-5" />
@@ -73,7 +73,7 @@ export function FloatingMenu() {
               onClick={() => setIsOpen(false)}
             >
               <span className="rounded-md bg-[#304439]/90 px-3 py-1 font-sans text-xs font-semibold text-[#FFD2A2] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                Booking
+                {t("common.navigation.booking")}
               </span>
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#304439] text-[#FFD2A2] shadow-lg">
                 <Calendar className="h-5 w-5" />
@@ -85,7 +85,7 @@ export function FloatingMenu() {
               onClick={() => setIsOpen(false)}
             >
               <span className="rounded-md bg-[#FFD2A2]/90 px-3 py-1 font-sans text-xs font-bold text-[#304439] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                Contato
+                {t("common.navigation.contact")}
               </span>
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FFD2A2] text-[#304439] shadow-lg">
                 <MessageCircle className="h-5 w-5" />
@@ -108,7 +108,7 @@ export function FloatingMenu() {
           href="/#localizacao"
           className="px-8 py-4 font-sans text-sm font-medium text-[#FFD2A2] transition hover:bg-[#FFD2A2]/10"
         >
-          Localização
+          {t("common.navigation.location")}
         </a>
         <a
           href="https://airbnb.com"
@@ -116,7 +116,7 @@ export function FloatingMenu() {
           rel="noreferrer"
           className="px-8 py-4 font-sans text-sm font-medium text-[#FFD2A2] transition hover:bg-[#FFD2A2]/10"
         >
-          Airbnb
+          {t("common.navigation.airbnb")}
         </a>
         <a
           href="https://booking.com"
@@ -124,13 +124,13 @@ export function FloatingMenu() {
           rel="noreferrer"
           className="px-8 py-4 font-sans text-sm font-medium text-[#FFD2A2] transition hover:bg-[#FFD2A2]/10"
         >
-          Booking
+          {t("common.navigation.booking")}
         </a>
         <Link
           to="/#contato"
           className="bg-[#FFD2A2] px-8 py-4 font-sans text-sm font-bold text-[#304439] transition hover:brightness-110"
         >
-          Contato Direto
+          {t("common.navigation.contact")}
         </Link>
       </div>
     </div>

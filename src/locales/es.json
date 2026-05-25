@@ -1,0 +1,194 @@
+{
+  "common": {
+    "buttons": {
+      "reserve": "Reservar Ahora",
+      "see_more": "Descubrir Más",
+      "watch_full_video": "VER VIDEO COMPLETO",
+      "video_tour": "Video Tour",
+      "see_all_photos": "Ver todas las fotos",
+      "book_airbnb": "Reservar vía Airbnb",
+      "book_booking": "Ver en Booking",
+      "view_gallery": "Ver Galería",
+      "check_availability": "Ver Disponibilidad →",
+      "make_reservation": "HAGA SU RESERVA"
+    },
+    "navigation": {
+      "home": "Inicio",
+      "accommodations": "Nuestras Villas",
+      "location": "Ubicación",
+      "airbnb": "Airbnb",
+      "booking": "Booking",
+      "contact": "Contacto Directo"
+    },
+    "footer": {
+      "description": "Vila Dolores es un conjunto exclusivo de cuatro house apartments en Juquehy. El equilibrio perfecto entre la calidez de un hogar y la sofisticación de la hospitalidad de alto nivel.",
+      "address": "Av João Luiz Faustino, 420\nJuquehy, São Sebastião - SP, Brasil",
+      "rights": "© 2026 Vila Dolores. Todos los derechos reservados."
+    }
+  },
+  "hero": {
+    "subtitle": "SU REFUGIO PRIVADO EN JUQUEHY",
+    "title": "Vila Dolores",
+    "headline_1": "House apartments en Juquehy:",
+    "headline_2": "comodidad de casa, practicidad de loft",
+    "quote": "\"En los años 80, nuestra abuela Dolores nos trajo por primera vez a Juquehy. En aquella época, la playa era un secreto bien guardado, con pocas casas y residentes. Décadas después, transformamos ese recuerdo en un espacio que celebra la calidez y el tiempo en familia, haciendo que quienes se alojan aquí se sientan como en casa, incluso lejos de casa.\"",
+    "cards": {
+      "location": "Ubicación privilegiada",
+      "beach_distance": "A 500m de la playa",
+      "center_distance": "A 2 cuadras del centro"
+    }
+  },
+  "about": {
+    "title": "HOUSE APARTMENTS",
+    "desc_1": "Vila Dolores es un conjunto exclusivo de cuatro house apartments que unen el confort y la privacidad de una casa con la practicidad y funcionalidad de un loft moderno.",
+    "desc_2": "Cada unidad ha sido cuidadosamente diseñada para ofrecer ambientes amplios, equipados y acogedores, que equilibran diseño y calidez, ideales para quienes buscan días de descanso y diversión con la familia o amigos.",
+    "desc_3": "¡Vea en \"Nuestras Villas\" la configuración ideal para usted!",
+    "beach_title": "LA PLAYA",
+    "beach_desc_1": "Con más de 3 km de extensión, Juquehy tiene una amplia franja de arena blanca y fina, un mar azul transparente y un atardecer que invita a quedarse en la playa.",
+    "beach_desc_2": "Desde el surf hasta la tranquilidad de un delicioso baño de mar, la playa también atrae a deportistas que disfrutan correr, jugar a la pelota, paletas y andar en bicicleta.",
+    "beach_desc_3": "¡Un ambiente familiar que le encantará!"
+  },
+  "accommodations_intro": {
+    "title": "¡Vea qué alojamiento es ideal para usted!",
+    "description": "Explore las comodidades y configuraciones de nuestras unidades. Cada una ofrece un espacio único para que se relaje y disfrute de momentos especiales. Descubra las facilidades y los ambientes acogedores que hemos preparado para usted. Navegue por la galería de fotos y encuentre el lugar perfecto para su estadía."
+  },
+  "general_info": {
+    "title": "Información General",
+    "location_label": "Ubicación:",
+    "location_desc": "a 500 metros de la playa — se puede llegar caminando tranquilamente",
+    "parking_label": "Estacionamiento:",
+    "parking_desc": "1 espacio exclusivo por casa",
+    "wifi_label": "Conectividad:",
+    "wifi_desc": "Wi-Fi disponible en todas las unidades (ideal para trabajo remoto o streaming)",
+    "security_label": "Seguridad:",
+    "security_desc": "área externa monitoreada por cámaras 24h, cerraduras con código",
+    "shower_label": "Ducha exterior:",
+    "shower_desc": "ducha externa con lava-pies",
+    "schedule_label": "Horarios:",
+    "schedule_desc": "Check-in: 15:00 h / Check-out: 11:00 h"
+  },
+  "location": {
+    "title": "UBICACIÓN PRIVILEGIADA",
+    "description_1": "Vila Dolores está ubicada a solo 500 metros de la playa, en la entrada 4, y a dos cuadras del centro comercial, a pocos pasos de todo lo que necesita.",
+    "description_2": "Supermercados, excelentes restaurantes, heladerías premium, panaderías, farmacias y centros comerciales, sin necesidad de sacar el auto del garaje."
+  },
+  "map_section": {
+    "title": "CONFORT Y PRACTICIDAD",
+    "desc_1": "a 500 metros de la playa y cerca del centro comercial,",
+    "desc_2": "a pocas cuadras de todo lo que necesita:",
+    "desc_3": "supermercados, excelentes restaurantes, grandes heladerías,",
+    "desc_4": "panaderías, farmacias y centros comerciales."
+  },
+  "accommodations": {
+    "labels": {
+      "subtitle": "Nuestras villas",
+      "ground": "planta baja",
+      "superior": "planta alta",
+      "capacity": "Hasta {{count}} huéspedes",
+      "size": "{{size}}m²",
+      "explore_details": "Explore los detalles"
+    },
+    "beds": {
+      "queen": "Cama Queen",
+      "box_queen": "Cama Box Queen",
+      "single": "Cama Individual",
+      "double": "Cama Doble",
+      "sofa_bed": "Sofá Cama Doble"
+    },
+    "amenities": {
+      "air_conditioning_all": "Aire acondicionado en todas las habitaciones",
+      "air_conditioning_environments": "Aire acondicionado en todos los ambientes",
+      "air_conditioning_rooms": "Aire acondicionado en los ambientes",
+      "kitchen_6": "Cocina totalmente equipada para 6 huéspedes",
+      "kitchen_7": "Cocina totalmente equipada para 7 huéspedes",
+      "kitchen_8": "Cocina totalmente equipada para 8 huéspedes",
+      "backyard": "Patio privado (8m²)",
+      "gourmet_patio": "Patio gourmet privado",
+      "gourmet_solarium": "Solárium gourmet privado (20m²)",
+      "bbq_shower": "Parrilla y ducha exterior",
+      "rooftop_shower": "Ducha exterior en el Rooftop",
+      "exclusive_shower": "Ducha exterior exclusiva",
+      "washer": "Lavandería con lavadora",
+      "beach_kit": "Kit de playa (4 sillas + sombrilla)",
+      "wifi": "Wi-Fi de alta velocidad",
+      "smart_tv": "Smart TV conectada",
+      "tv_mezzanine": "TV en Mezzanine y Sala de estar",
+      "garage": "1 Espacio de Estacionamiento"
+    },
+    "areia": {
+      "name": "Areia",
+      "carousel_title": "Villa 1 \"Areia\"",
+      "carousel_specs": "planta baja | Hasta 6 huéspedes | 70m²",
+      "short_desc": "Acogedora y práctica — perfecta para familias más pequeñas.",
+      "full_desc": "Casa Areia, ubicada en la planta baja, ofrece la comodidad perfecta para quienes desean llegar de la playa, instalarse rápidamente y disfrutar del entorno sin subir escaleras. El pequeño patio integrado aporta un respiro de aire libre y practicidad, ideal para momentos relajantes después de un baño de mar.",
+      "list": {
+        "suite": "1 suite con cama queen",
+        "room": "1 habitación con 2 camas individuales y baño integrado",
+        "living": "Comedor y sala de estar de concepto abierto, sofá cama doble y TV conectada",
+        "ac": "Aire acondicionado en todas las habitaciones",
+        "kitchen": "Cocina equipada con cooktop, refrigerador, microondas y utensilios para 6 personas",
+        "backyard": "Pequeño patio (8 m²)",
+        "washer": "Lavandería con lavadora",
+        "kit": "Kit de playa: 4 sillas + sombrilla"
+      },
+      "footer": "Perfecta para quienes quieren llegar, instalarse cómodamente y disfrutar del mar sin preocupaciones."
+    },
+    "mare": {
+      "name": "Maré",
+      "carousel_title": "Villa 2 \"Maré\"",
+      "carousel_specs": "planta baja | Hasta 7 huéspedes | 80m²",
+      "short_desc": "Amplio espacio con patio gourmet privado — para disfrutar después de la playa.",
+      "full_desc": "Casa Maré es la villa de planta baja que eleva la experiencia de convivencia. El gran diferencial es su patio gourmet privado con parrilla y ducha exterior exclusiva. Es el entorno definitivo para asados, risas y grandes momentos al aire libre con sus seres queridos, uniendo la funcionalidad del interior con el encanto del área exterior.",
+      "list": {
+        "suite": "1 suite con cama queen",
+        "room": "1 habitación con cama doble + cama individual y baño integrado",
+        "living": "Comedor y sala de estar de concepto abierto, sofá cama doble y TV conectada",
+        "ac": "Aire acondicionado en todos los ambientes",
+        "kitchen": "Cocina equipada con cooktop, refrigerador, microondas y utensilios para 7 personas",
+        "washer": "Lavandería con lavadora",
+        "patio": "Patio gourmet privado con parrilla",
+        "shower": "Ducha exterior exclusiva",
+        "kit": "Kit de playa: 4 sillas + sombrilla"
+      },
+      "footer": "El ambiente perfecto para asados, risas y buenos momentos al aire libre."
+    },
+    "horizonte": {
+      "name": "Horizonte",
+      "carousel_title": "Villa 3 \"Horizonte\"",
+      "carousel_specs": "planta alta | Hasta 8 huéspedes | 90m²",
+      "short_desc": "Más espacio en 2 plantas, mayor confort y un solárium gourmet privado.",
+      "full_desc": "Casa Horizonte ofrece el refinamiento de una residencia dúplex. En la planta alta, disfrutará de un amplio mezzanine que funciona como una segunda sala de estar. El punto culminante de la villa es el impresionante solárium gourmet de 20m², garantizando total privacidad para disfrutar de la libertad de su propio rooftop, de día o de noche.",
+      "list": {
+        "suite": "1 suite con cama box queen",
+        "room": "1 habitación con 2 camas individuales y baño integrado",
+        "living": "Comedor y sala de estar de concepto abierto y sofá cama doble",
+        "mezzanine": "Mezzanine con TV conectada y sofá cama doble",
+        "ac": "Aire acondicionado en todos los ambientes",
+        "kitchen": "Cocina equipada con cooktop, refrigerador, microondas y utensilios para 8 personas",
+        "washer": "Lavandería con lavadora",
+        "solarium": "Solárium gourmet de 20m² con ducha exterior",
+        "kit": "Kit de playa: 4 sillas + sombrilla"
+      },
+      "footer": "El espacio ideal para quienes buscan confort y la libertad de disfrutar el día y la noche en su propio rooftop."
+    },
+    "brisa": {
+      "name": "Brisa",
+      "carousel_title": "Villa 4 \"Brisa\"",
+      "carousel_specs": "planta alta | Hasta 8 huéspedes | 90m²",
+      "short_desc": "La misma estructura y encanto que Casa Horizonte, con un solárium gourmet privado.",
+      "full_desc": "Casa Brisa refleja la impresionante arquitectura de Casa Horizonte. Con espacios divididos en dos plantas, posee el encanto del mezzanine y el lujo del solárium gourmet privado de 20m². Es el espacio ideal para familias más grandes o grupos de amigos que no renuncian al confort, la brisa fresca y un rooftop exclusivo en Juquehy.",
+      "list": {
+        "suite": "1 suite con cama box queen",
+        "room": "1 habitación con dos camas individuales y baño integrado",
+        "living": "Comedor y sala de estar de concepto abierto y sofá cama doble",
+        "mezzanine": "Mezzanine con TV conectada y sofá cama doble",
+        "ac": "Aire acondicionado en todos los ambientes",
+        "kitchen": "Cocina equipada con cooktop, refrigerador, microondas y utensilios para 8 personas",
+        "washer": "Lavandería con lavadora",
+        "solarium": "Solárium gourmet de 20m² con ducha exterior",
+        "kit": "Kit de playa: 4 sillas + sombrilla"
+      },
+      "footer": "El espacio ideal para quienes buscan confort y la libertad de disfrutar el día y la noche en su propio rooftop."
+    }
+  }
+}

@@ -1,13 +1,52 @@
 import { X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "../common/LanguageSwitcher";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      }
+
+      if (currentScrollY <= lastScrollY) {
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <header className="relative z-50 flex w-full items-start justify-between px-6 py-6 md:absolute md:top-0 md:px-8">
-      <div className="relative">
+    <header 
+      className={`fixed top-0 left-0 z-50 flex w-full items-start justify-between px-6 py-6 transition-transform duration-500 ease-in-out md:absolute md:px-8 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+      onMouseEnter={() => setIsVisible(true)}
+    >
+      <div className="relative" ref={menuRef}>
         <button
           type="button"
           aria-label="Abrir menu"
@@ -32,14 +71,14 @@ export function Header() {
               className="font-sans text-sm font-semibold text-[#FFD2A2]"
               onClick={() => setIsMenuOpen(false)}
             >
-              Página Inicial
+              {t("common.navigation.home")}
             </Link>
             <Link
               to="/acomodacoes"
               className="font-sans text-sm font-semibold text-[#FFD2A2]"
               onClick={() => setIsMenuOpen(false)}
             >
-              Nossas Acomodações
+              {t("common.navigation.accommodations")}
             </Link>
             <div className="h-px w-full bg-white/10" />
             <a
@@ -47,7 +86,7 @@ export function Header() {
               className="font-sans text-sm font-medium text-white/90"
               onClick={() => setIsMenuOpen(false)}
             >
-              Localização
+              {t("common.navigation.location")}
             </a>
             <a
               href="https://airbnb.com"
@@ -55,7 +94,7 @@ export function Header() {
               rel="noreferrer"
               className="font-sans text-sm font-medium text-white/90"
             >
-              Airbnb
+              {t("common.navigation.airbnb")}
             </a>
             <a
               href="https://booking.com"
@@ -63,20 +102,23 @@ export function Header() {
               rel="noreferrer"
               className="font-sans text-sm font-medium text-white/90"
             >
-              Booking
+              {t("common.navigation.booking")}
             </a>
             <a
               href="/#contato"
               className="mt-2 rounded-md bg-[#FFD2A2] px-4 py-2 text-center font-sans text-sm font-bold text-[#304439]"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contato Direto
+              {t("common.navigation.contact")}
             </a>
+            
+            <div className="my-1 h-px w-full bg-white/10" />
+            <LanguageSwitcher />
           </nav>
         )}
       </div>
 
-      <div className="md:absolute md:left-1/2 md:top-0 md:-translate-x-1/2 md:translate-y-4 flex h-20 w-32 items-center justify-center max-w-full md:h-32 md:w-48 lg:h-48 lg:w-64">
+      <div className="flex h-20 w-32 max-w-full items-center justify-center md:absolute md:left-1/2 md:top-0 md:h-32 md:w-48 md:-translate-x-1/2 md:translate-y-4 lg:h-48 lg:w-64">
         <Link to="/" className="block h-full w-full transition hover:opacity-80">
           <img
             src="/logo-original.png"
@@ -90,7 +132,7 @@ export function Header() {
         to="/acomodacoes"
         className="rounded-md bg-[#FFD2A2] px-4 py-2 font-sans text-xs font-bold text-[#304439] transition hover:brightness-110 md:px-6 md:py-3 md:text-sm"
       >
-        Reserve Já
+        {t("common.buttons.reserve")}
       </Link>
     </header>
   );

@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 
 const galleries = {
   areia: [
@@ -28,6 +29,7 @@ const galleries = {
 type ActiveGalleryType = { id: string; images: string[] };
 
 export function AccommodationsCarousel() {
+  const { t } = useTranslation();
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeGallery, setActiveGallery] = useState<ActiveGalleryType | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -113,76 +115,76 @@ export function AccommodationsCarousel() {
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-14 md:flex-row md:items-center md:px-24">
               <div className="flex h-full flex-1 flex-col justify-start">
                 <p className="mb-2 font-sans text-sm font-bold uppercase tracking-[0.2em] text-[#81AF8E]">
-                  Nossas acomodações
+                  {t("accommodations.labels.subtitle")}
                 </p>
                 <h2 className="mb-2 font-sans text-4xl font-extrabold tracking-tight text-[#304439]">
-                  Casa 1 "Areia"
+                  {t("accommodations.areia.carousel_title")}
                 </h2>
                 <p className="mb-6 font-sans text-lg font-semibold text-[#304439]/70">
-                  térreo | Até 6 pessoas | 70m²
+                  {t("accommodations.areia.carousel_specs")}
                 </p>
                 <p className="mb-8 font-sans text-xl font-medium italic leading-relaxed text-[#304439]">
-                  Acolhedora e prática — perfeita para famílias menores
+                  {t("accommodations.areia.short_desc")}
                 </p>
                 <ul className="mb-10 flex flex-col gap-3">
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      1 suíte com cama queen
+                      {t("accommodations.areia.list.suite")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      1 quarto com 2 camas de solteiro e banheiro integrado
+                      {t("accommodations.areia.list.room")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Sala de jantar e estar com conceito aberto, sofá-cama casal e TV conectada
+                      {t("accommodations.areia.list.living")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Ar-condicionado em todos os cômodos
+                      {t("accommodations.areia.list.ac")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Cozinha equipada com cooktop, geladeira, microondas e utensílios para 6 pessoas
+                      {t("accommodations.areia.list.kitchen")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Pequeno quintal (8 m2)
+                      {t("accommodations.areia.list.backyard")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Lavanderia com máquina de lavar
+                      {t("accommodations.areia.list.washer")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Kit praia: 4 cadeiras + guarda-sol
+                      {t("accommodations.areia.list.kit")}
                     </p>
                   </li>
                 </ul>
                 <div className="mt-auto flex flex-col gap-8">
                   <p className="font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
-                    Perfeita para quem quer chegar, acomodar tudo direitinho e aproveitar o mar sem preocupações.
+                    {t("accommodations.areia.footer")}
                   </p>
                   <Link
                     to="/acomodacoes#areia"
                     className="self-start rounded-md bg-[#304439] px-10 py-4 font-sans text-base font-bold text-[#FFD2A2] transition hover:brightness-110"
                   >
-                    Ver Mais
+                    {t("common.buttons.see_more")}
                   </Link>
                 </div>
               </div>
@@ -197,7 +199,7 @@ export function AccommodationsCarousel() {
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-500 group-hover:bg-black/20">
                   <p className="translate-y-4 font-sans text-lg font-bold text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                    Ver Galeria
+                    {t("common.buttons.view_gallery")}
                   </p>
                 </div>
               </div>
@@ -217,88 +219,88 @@ export function AccommodationsCarousel() {
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-500 group-hover:bg-black/20">
                   <p className="translate-y-4 font-sans text-lg font-bold text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                    Ver Galeria
+                    {t("common.buttons.view_gallery")}
                   </p>
                 </div>
               </div>
               <div className="flex h-full flex-1 flex-col justify-start md:pl-8">
                 <p className="mb-2 font-sans text-sm font-bold uppercase tracking-[0.2em] text-[#81AF8E]">
-                  Nossas acomodações
+                  {t("accommodations.labels.subtitle")}
                 </p>
                 <h2 className="mb-2 font-sans text-4xl font-extrabold tracking-tight text-[#304439]">
-                  Casa 2 "Maré"
+                  {t("accommodations.mare.carousel_title")}
                 </h2>
                 <p className="mb-6 font-sans text-lg font-semibold text-[#304439]/70">
-                  térreo | Até 7 pessoas | 80m²
+                  {t("accommodations.mare.carousel_specs")}
                 </p>
                 <p className="mb-8 font-sans text-xl font-medium italic leading-relaxed text-[#304439]">
-                  Um espaço amplo com pátio gourmet privativo — para curtir depois da praia.
+                  {t("accommodations.mare.short_desc")}
                 </p>
                 <ul className="mb-10 flex flex-col gap-3">
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      1 suíte com cama queen
+                      {t("accommodations.mare.list.suite")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      1 quarto com cama de casal + cama de solteiro e banheiro integrado
+                      {t("accommodations.mare.list.room")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Sala de jantar e estar com conceito aberto, sofá-cama casal e TV conectada
+                      {t("accommodations.mare.list.living")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Ar-condicionado em todos os ambientes
+                      {t("accommodations.mare.list.ac")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Cozinha equipada com cooktop, geladeira, micro-ondas e utensílios para 7 pessoas
+                      {t("accommodations.mare.list.kitchen")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Lavanderia com máquina de lavar
+                      {t("accommodations.mare.list.washer")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Pátio gourmet privativo com churrasqueira
+                      {t("accommodations.mare.list.patio")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Chuveirão exclusivo
+                      {t("accommodations.mare.list.shower")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Kit praia: 4 cadeiras + guarda-sol
+                      {t("accommodations.mare.list.kit")}
                     </p>
                   </li>
                 </ul>
                 <div className="mt-auto flex flex-col gap-8">
                   <p className="font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
-                    O ambiente perfeito para churrascos, risadas e bons momentos ao ar livre.
+                    {t("accommodations.mare.footer")}
                   </p>
                   <Link
                     to="/acomodacoes#mare"
                     className="self-start rounded-md bg-[#304439] px-10 py-4 font-sans text-base font-bold text-[#FFD2A2] transition hover:brightness-110"
                   >
-                    Ver Mais
+                    {t("common.buttons.see_more")}
                   </Link>
                 </div>
               </div>
@@ -309,82 +311,82 @@ export function AccommodationsCarousel() {
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-14 md:flex-row md:items-center md:px-24">
               <div className="flex h-full flex-1 flex-col justify-start">
                 <p className="mb-2 font-sans text-sm font-bold uppercase tracking-[0.2em] text-[#81AF8E]">
-                  Nossas acomodações
+                  {t("accommodations.labels.subtitle")}
                 </p>
                 <h2 className="mb-2 font-sans text-4xl font-extrabold tracking-tight text-[#304439]">
-                  Casa 3 "Horizonte"
+                  {t("accommodations.horizonte.carousel_title")}
                 </h2>
                 <p className="mb-6 font-sans text-lg font-semibold text-[#304439]/70">
-                  superior | Até 8 pessoas | 90m²
+                  {t("accommodations.horizonte.carousel_specs")}
                 </p>
                 <p className="mb-8 font-sans text-xl font-medium italic leading-relaxed text-[#304439]">
-                  Mais espaço em 2 andares, mais conforto e um solarium gourmet privativo — para curtir com a família ou grupo de amigos.
+                  {t("accommodations.horizonte.short_desc")}
                 </p>
                 <ul className="mb-10 flex flex-col gap-3">
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      1 suíte com cama box queen
+                      {t("accommodations.horizonte.list.suite")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      1 quarto com 2 camas de solteiro e banheiro integrado
+                      {t("accommodations.horizonte.list.room")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Sala de jantar e estar com conceito aberto e sofá-cama casal
+                      {t("accommodations.horizonte.list.living")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Mezanino com TV conectada e sofá-cama casal
+                      {t("accommodations.horizonte.list.mezzanine")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Ar-condicionado em todos os ambientes
+                      {t("accommodations.horizonte.list.ac")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Cozinha equipada com cooktop, geladeira, microondas e utensílios para 8 pessoas
+                      {t("accommodations.horizonte.list.kitchen")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Lavanderia com máquina de lavar
+                      {t("accommodations.horizonte.list.washer")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Solarium gourmet de 20m² com chuveirão
+                      {t("accommodations.horizonte.list.solarium")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Kit praia: 4 cadeiras + guarda-sol
+                      {t("accommodations.horizonte.list.kit")}
                     </p>
                   </li>
                 </ul>
                 <div className="mt-auto flex flex-col gap-8">
                   <p className="font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
-                    O espaço ideal para quem quer conforto e a liberdade de aproveitar o dia e a noite no seu próprio rooftop.
+                    {t("accommodations.horizonte.footer")}
                   </p>
                   <Link
                     to="/acomodacoes#horizonte"
                     className="self-start rounded-md bg-[#304439] px-10 py-4 font-sans text-base font-bold text-[#FFD2A2] transition hover:brightness-110"
                   >
-                    Ver Mais
+                    {t("common.buttons.see_more")}
                   </Link>
                 </div>
               </div>
@@ -399,7 +401,7 @@ export function AccommodationsCarousel() {
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-500 group-hover:bg-black/20">
                   <p className="translate-y-4 font-sans text-lg font-bold text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                    Ver Galeria
+                    {t("common.buttons.view_gallery")}
                   </p>
                 </div>
               </div>
@@ -419,88 +421,88 @@ export function AccommodationsCarousel() {
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-500 group-hover:bg-black/20">
                   <p className="translate-y-4 font-sans text-lg font-bold text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                    Ver Galeria
+                    {t("common.buttons.view_gallery")}
                   </p>
                 </div>
               </div>
               <div className="flex h-full flex-1 flex-col justify-start md:pl-8">
                 <p className="mb-2 font-sans text-sm font-bold uppercase tracking-[0.2em] text-[#81AF8E]">
-                  Nossas acomodações
+                  {t("accommodations.labels.subtitle")}
                 </p>
                 <h2 className="mb-2 font-sans text-4xl font-extrabold tracking-tight text-[#304439]">
-                  Casa 4 "Brisa"
+                  {t("accommodations.brisa.carousel_title")}
                 </h2>
                 <p className="mb-6 font-sans text-lg font-semibold text-[#304439]/70">
-                  superior | Até 8 pessoas | 90m²
+                  {t("accommodations.brisa.carousel_specs")}
                 </p>
                 <p className="mb-8 font-sans text-xl font-medium italic leading-relaxed text-[#304439]">
-                  Mais espaço em 2 andares, mais conforto e um solário gourmet privativo — para curtir com a família ou grupo de amigos. Mesma estrutura e charme da Casa Horizonte.
+                  {t("accommodations.brisa.short_desc")}
                 </p>
                 <ul className="mb-10 flex flex-col gap-3">
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      1 suíte com cama box queen
+                      {t("accommodations.brisa.list.suite")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      1 quarto com duas camas de solteiro e banheiro integrado
+                      {t("accommodations.brisa.list.room")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Sala de jantar e estar com conceito aberto e sofá-cama casal
+                      {t("accommodations.brisa.list.living")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Mezanino com TV conectada e sofá-cama casal
+                      {t("accommodations.brisa.list.mezzanine")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Ar-condicionado em todos os ambientes
+                      {t("accommodations.brisa.list.ac")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Cozinha equipada com cooktop, geladeira, microondas e utensílios para 8 pessoas
+                      {t("accommodations.brisa.list.kitchen")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Lavanderia com máquina de lavar
+                      {t("accommodations.brisa.list.washer")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Solário gourmet de 20m² com chuveirão
+                      {t("accommodations.brisa.list.solarium")}
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#304439]" />
                     <p className="font-sans text-lg font-medium text-[#304439]/90">
-                      Kit praia: 4 cadeiras + guarda-sol
+                      {t("accommodations.brisa.list.kit")}
                     </p>
                   </li>
                 </ul>
                 <div className="mt-auto flex flex-col gap-8">
                   <p className="font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
-                    O espaço ideal para quem quer conforto e a liberdade de aproveitar o dia e a noite no seu próprio rooftop.
+                    {t("accommodations.brisa.footer")}
                   </p>
                   <Link
                     to="/acomodacoes#brisa"
                     className="self-start rounded-md bg-[#304439] px-10 py-4 font-sans text-base font-bold text-[#FFD2A2] transition hover:brightness-110"
                   >
-                    Ver Mais
+                    {t("common.buttons.see_more")}
                   </Link>
                 </div>
               </div>
@@ -539,7 +541,7 @@ export function AccommodationsCarousel() {
                 to={`/acomodacoes?gallery=${activeGallery.id}`}
                 className="font-sans text-xl font-bold text-[#FFD2A2] underline underline-offset-8 transition hover:text-white md:text-3xl"
               >
-                Ver todas as fotos
+                {t("common.buttons.see_all_photos")}
               </Link>
             </div>
           )}

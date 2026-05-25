@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export function MapSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full bg-white py-24 font-sans" id="localizacao">
       <div className="mx-auto flex max-w-7xl flex-col gap-12 px-8 md:flex-row md:items-center md:px-16">
@@ -16,13 +20,13 @@ export function MapSection() {
 
         <div className="flex w-full flex-col items-center justify-center text-center md:flex-1">
           <h2 className="mb-6 font-sans text-2xl font-extrabold tracking-tight text-[#304439] md:text-3xl">
-            CONFORTO E PRATICIDADE
+            {t("map_section.title")}
           </h2>
           <p className="mb-8 font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
-            a 500 metros da praia e próxima do centro comercial,<br />
-            a poucos quarteirões de tudo o que você precisa:<br />
-            supermercados, excelentes restaurantes, ótimas sorveterias,<br />
-            padarias, farmácias e shopping centers.
+            {t("map_section.desc_1")}<br />
+            {t("map_section.desc_2")}<br />
+            {t("map_section.desc_3")}<br />
+            {t("map_section.desc_4")}
           </p>
           
           <span className="mb-8 font-sans text-3xl font-light text-[#81AF8E]">
@@ -30,8 +34,7 @@ export function MapSection() {
           </span>
           
           <address className="font-sans text-base font-bold not-italic leading-relaxed text-[#304439]">
-            Av João Luiz Faustino, 420<br />
-            Juquehy, São Sebastião, SP 11623-256
+            {t("common.footer.address")}
           </address>
         </div>
       </div>

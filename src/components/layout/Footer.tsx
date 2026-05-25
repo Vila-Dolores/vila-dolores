@@ -1,4 +1,9 @@
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "../common/LanguageSwitcher";
+
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="w-full bg-[#304439] px-8 py-12 font-sans md:px-16" id="contato">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-12 border-b border-[#FFD2A2]/20 pb-12 md:flex-row md:items-start">
@@ -12,36 +17,39 @@ export function Footer() {
 
         <div className="flex max-w-lg flex-col items-center gap-6 text-center md:items-center">
           <p className="font-sans text-sm font-medium leading-relaxed text-[#FFD2A2]/90">
-            A Vila Dolores é um conjunto exclusivo de quatro house apartments em Juquehy. O equilíbrio perfeito entre o aconchego de uma casa e a sofisticação da hospitalidade de alto padrão.
+            {t("common.footer.description")}
           </p>
           <div className="h-px w-16 bg-[#FFD2A2]/30" />
-          <address className="font-sans text-sm font-medium not-italic text-[#FFD2A2]/70">
-            Av João Luiz Faustino, 420 <br />
-            Juquehy, São Sebastião - SP
+          <address className="font-sans text-sm font-medium not-italic text-[#FFD2A2]/70 whitespace-pre-line">
+            {t("common.footer.address")}
           </address>
         </div>
 
-        <div className="flex flex-col items-center gap-4 md:items-end">
+        <div className="flex flex-col items-center gap-6 md:items-end">
           <nav className="flex flex-col items-center gap-3 md:items-end">
             <a href="/#localizacao" className="font-sans text-sm font-bold tracking-wide text-[#FFD2A2] transition hover:text-white">
-              Localização
+              {t("common.navigation.location")}
             </a>
             <a href="https://airbnb.com" target="_blank" rel="noreferrer" className="font-sans text-sm font-bold tracking-wide text-[#FFD2A2] transition hover:text-white">
-              Airbnb
+              {t("common.navigation.airbnb")}
             </a>
             <a href="https://booking.com" target="_blank" rel="noreferrer" className="font-sans text-sm font-bold tracking-wide text-[#FFD2A2] transition hover:text-white">
-              Booking
+              {t("common.navigation.booking")}
             </a>
             <a href="#contato" className="font-sans text-sm font-bold tracking-wide text-[#FFD2A2] transition hover:text-white">
-              Contato
+              {t("common.navigation.contact")}
             </a>
           </nav>
+          
+          <div className="mt-2">
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
 
       <div className="mx-auto mt-8 flex max-w-7xl justify-center">
         <p className="font-sans text-xs text-[#FFD2A2]/50">
-          © {new Date().getFullYear()} Vila Dolores. Todos os direitos reservados.
+          {t("common.footer.rights", { year: new Date().getFullYear() })}
         </p>
       </div>
     </footer>
