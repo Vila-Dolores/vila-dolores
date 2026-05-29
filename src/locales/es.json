@@ -115,12 +115,12 @@
       "tv_mezzanine": "TV en Mezzanine y Sala de estar",
       "garage": "1 Espacio de Estacionamiento"
     },
-    "areia": {
-      "name": "Areia",
-      "carousel_title": "Villa 1 \"Areia\"",
+    "casa_1": {
+      "name": "Casa 1",
+      "carousel_title": "Casa 1",
       "carousel_specs": "planta baja | Hasta 6 huéspedes | 70m²",
       "short_desc": "Acogedora y práctica — perfecta para familias más pequeñas.",
-      "full_desc": "Casa Areia, ubicada en la planta baja, ofrece la comodidad perfecta para quienes desean llegar de la playa, instalarse rápidamente y disfrutar del entorno sin subir escaleras. El pequeño patio integrado aporta un respiro de aire libre y practicidad, ideal para momentos relajantes después de un baño de mar.",
+      "full_desc": "Casa 1, ubicada en la planta baja, ofrece la comodidad perfecta para quienes desean llegar de la playa, instalarse rápidamente y disfrutar del entorno sin subir escaleras. El pequeño patio integrado aporta un respiro de aire libre y practicidad, ideal para momentos relajantes después de un baño de mar.",
       "list": {
         "suite": "1 suite con cama queen",
         "room": "1 habitación con 2 camas individuales y baño integrado",
@@ -133,12 +133,12 @@
       },
       "footer": "Perfecta para quienes quieren llegar, instalarse cómodamente y disfrutar del mar sin preocupaciones."
     },
-    "mare": {
-      "name": "Maré",
-      "carousel_title": "Villa 2 \"Maré\"",
+    "casa_2": {
+      "name": "Casa 2",
+      "carousel_title": "Casa 2",
       "carousel_specs": "planta baja | Hasta 7 huéspedes | 80m²",
       "short_desc": "Amplio espacio con patio gourmet privado — para disfrutar después de la playa.",
-      "full_desc": "Casa Maré es la villa de planta baja que eleva la experiencia de convivencia. El gran diferencial es su patio gourmet privado con parrilla y ducha exterior exclusiva. Es el entorno definitivo para asados, risas y grandes momentos al aire libre con sus seres queridos, uniendo la funcionalidad del interior con el encanto del área exterior.",
+      "full_desc": "Casa 2 es la villa de planta baja que eleva la experiencia de convivencia. El gran diferencial es su patio gourmet privado con parrilla y ducha exterior exclusiva. Es el entorno definitivo para asados, risas y grandes momentos al aire libre con sus seres queridos, uniendo la funcionalidad del interior con el encanto del área exterior.",
       "list": {
         "suite": "1 suite con cama queen",
         "room": "1 habitación con cama doble + cama individual y baño integrado",
@@ -152,12 +152,12 @@
       },
       "footer": "El ambiente perfecto para asados, risas y buenos momentos al aire libre."
     },
-    "horizonte": {
-      "name": "Horizonte",
-      "carousel_title": "Villa 3 \"Horizonte\"",
+    "casa_3": {
+      "name": "Casa 3",
+      "carousel_title": "Casa 3",
       "carousel_specs": "planta alta | Hasta 8 huéspedes | 90m²",
       "short_desc": "Más espacio en 2 plantas, mayor confort y un solárium gourmet privado.",
-      "full_desc": "Casa Horizonte ofrece el refinamiento de una residencia dúplex. En la planta alta, disfrutará de un amplio mezzanine que funciona como una segunda sala de estar. El punto culminante de la villa es el impresionante solárium gourmet de 20m², garantizando total privacidad para disfrutar de la libertad de su propio rooftop, de día o de noche.",
+      "full_desc": "Casa 3 ofrece el refinamiento de una residencia dúplex. En la planta alta, disfrutará de un amplio mezzanine que funciona como una segunda sala de estar. El punto culminante de la villa es el impresionante solárium gourmet de 20m², garantizando total privacidad para disfrutar de la libertad de su propio rooftop, de día o de noche.",
       "list": {
         "suite": "1 suite con cama box queen",
         "room": "1 habitación con 2 camas individuales y baño integrado",
@@ -171,12 +171,12 @@
       },
       "footer": "El espacio ideal para quienes buscan confort y la libertad de disfrutar el día y la noche en su propio rooftop."
     },
-    "brisa": {
-      "name": "Brisa",
-      "carousel_title": "Villa 4 \"Brisa\"",
+    "casa_4": {
+      "name": "Casa 4",
+      "carousel_title": "Casa 4",
       "carousel_specs": "planta alta | Hasta 8 huéspedes | 90m²",
-      "short_desc": "La misma estructura y encanto que Casa Horizonte, con un solárium gourmet privado.",
-      "full_desc": "Casa Brisa refleja la impresionante arquitectura de Casa Horizonte. Con espacios divididos en dos plantas, posee el encanto del mezzanine y el lujo del solárium gourmet privado de 20m². Es el espacio ideal para familias más grandes o grupos de amigos que no renuncian al confort, la brisa fresca y un rooftop exclusivo en Juquehy.",
+      "short_desc": "La misma estructura y encanto que Casa 3, con un solárium gourmet privado.",
+      "full_desc": "Casa 4 refleja la impresionante arquitectura de Casa 3. Con espacios divididos en dos plantas, posee el encanto del mezzanine y el lujo del solárium gourmet privado de 20m². Es el espacio ideal para familias más grandes o grupos de amigos que no renuncian al confort, la brisa fresca y un rooftop exclusivo en Juquehy.",
       "list": {
         "suite": "1 suite con cama box queen",
         "room": "1 habitación con dos camas individuales y baño integrado",

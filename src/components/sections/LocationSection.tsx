@@ -18,37 +18,15 @@ export function LocationSection() {
           </p>
         </div>
 
-        <div className="flex-1">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="h-48 overflow-hidden rounded-xl md:h-64">
-              <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
-                alt={t("location.images.restaurants")}
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="h-48 overflow-hidden rounded-xl md:h-64">
-              <img
-                src="https://images.unsplash.com/photo-1519690889869-e705e59f72e1?auto=format&fit=crop&w=600&q=80"
-                alt={t("location.images.commerce")}
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="h-48 overflow-hidden rounded-xl md:h-64">
-              <img
-                src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=600&q=80"
-                alt={t("location.images.architecture")}
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="h-48 overflow-hidden rounded-xl md:h-64">
-              <img
-                src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=600&q=80"
-                alt={t("location.images.streets")}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </div>
+        <div className="relative h-[400px] w-full flex-1 overflow-hidden rounded-xl shadow-2xl md:h-[500px]">
+          <iframe
+            title="Mapa de Localização Vila Dolores"
+            src="https://maps.google.com/maps?q=Av.%20Jo%C3%A3o%20Luiz%20Faustino,%20420%20-%20Juquehy,%20S%C3%A3o%20Sebasti%C3%A3o%20-%20SP&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            className="absolute inset-0 h-full w-full border-0"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
     </section>

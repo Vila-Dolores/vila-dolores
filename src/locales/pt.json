@@ -41,7 +41,7 @@
   "about": {
     "title": "HOUSE APARTMENTS",
     "desc_1": "A Vila Dolores é um conjunto exclusivo de quatro house apartments que unem o conforto e a privacidade de uma casa à praticidade e funcionalidade de um loft moderno.",
-    "desc_2": "Cada unidade foi cuidadosamente projetada para oferecer ambientes amplos, equipados e acolhedores, que equilibram design e aconchego, ideais para quem busca dias de descanso e diversão com a família ou amigos.",
+    "desc_2": "Cada unidade foi cuidadosamente projetada para oferecer ambientes amplios, equipados e acolhedores, que equilibram design e aconchego, ideais para quem busca dias de descanso e diversão com a família ou amigos.",
     "desc_3": "Veja em \"Nossas Acomodações\" a configuração ideal para você!",
     "beach_title": "A PRAIA",
     "beach_desc_1": "Com mais de 3 km de extensão, Juquehy tem ampla faixa de areia branca e fina, um mar azul transparente e um pôr do sol que convida a ficar na praia.",
@@ -115,12 +115,12 @@
       "tv_mezzanine": "TV no Mezanino e Sala",
       "garage": "1 Vaga de Garagem"
     },
-    "areia": {
-      "name": "Areia",
-      "carousel_title": "Casa 1 \"Areia\"",
+    "casa_1": {
+      "name": "Casa 1",
+      "carousel_title": "Casa 1",
       "carousel_specs": "térreo | Até 6 pessoas | 70m²",
       "short_desc": "Acolhedora e prática — perfeita para famílias menores",
-      "full_desc": "A Casa Areia, localizada no térreo, oferece a comodidade perfeita para quem quer chegar da praia, acomodar tudo rapidamente e desfrutar do ambiente sem subir escadas. O pequeno quintal integrado traz um respiro de ar livre e praticidade, ideal para momentos relaxantes após um banho de mar.",
+      "full_desc": "A Casa 1, localizada no térreo, oferece a comodidade perfeita para quem quer chegar da praia, acomodar tudo rapidamente e desfrutar do ambiente sem subir escadas. O pequeno quintal integrado traz um respiro de ar livre e praticidade, ideal para momentos relaxantes após um banho de mar.",
       "list": {
         "suite": "1 suíte com cama queen",
         "room": "1 quarto com 2 camas de solteiro e banheiro integrado",
@@ -133,12 +133,12 @@
       },
       "footer": "Perfeita para quem quer chegar, acomodar tudo direitinho e aproveitar o mar sem preocupações."
     },
-    "mare": {
-      "name": "Maré",
-      "carousel_title": "Casa 2 \"Maré\"",
+    "casa_2": {
+      "name": "Casa 2",
+      "carousel_title": "Casa 2",
       "carousel_specs": "térreo | Até 7 pessoas | 80m²",
       "short_desc": "Um espaço amplo com pátio gourmet privativo — para curtir depois da praia.",
-      "full_desc": "A Casa Maré é o térreo que eleva a experiencia de convivencia. O grande diferencial é o seu pátio gourmet privativo com churrasqueira e chuveirão exclusivo. É o ambiente definitivo para churrascos, risadas e bons momentos ao ar livre com quem você ama, unindo a funcionalidade do interior com a delícia da área externa.",
+      "full_desc": "A Casa 2 é o térreo que eleva a experiencia de convivencia. O grande diferencial é o seu pátio gourmet privativo com churrasqueira e chuveirão exclusivo. É o ambiente definitivo para churrascos, risadas e bons momentos ao ar livre com quem você ama, unindo a funcionalidade do interior com a delícia da área externa.",
       "list": {
         "suite": "1 suíte com cama queen",
         "room": "1 quarto com cama de casal + cama de solteiro e banheiro integrado",
@@ -152,12 +152,12 @@
       },
       "footer": "O ambiente perfeito para churrascos, risadas e bons momentos ao ar livre."
     },
-    "horizonte": {
-      "name": "Horizonte",
-      "carousel_title": "Casa 3 \"Horizonte\"",
+    "casa_3": {
+      "name": "Casa 3",
+      "carousel_title": "Casa 3",
       "carousel_specs": "superior | Até 8 pessoas | 90m²",
       "short_desc": "Mais espaço em 2 andares, mais conforto e um solarium gourmet privativo.",
-      "full_desc": "A Casa Horizonte oferece o requinte de uma residência duplex. No andar superior, você desfruta de um amplo mezanino que funciona como um segundo ambiente de estar. O ponto alto da casa é o impressionante solarium gourmet de 20m², garantindo total privacidade para curtir a liberdade do seu próprio rooftop, de dia ou de noite.",
+      "full_desc": "A Casa 3 oferece o requinte de uma residência duplex. No andar superior, você desfruta de um amplo mezanino que funciona como um segundo ambiente de estar. O ponto alto da casa é o impressionante solarium gourmet de 20m², garantindo total privacidade para curtir a liberdade do seu próprio rooftop, de dia ou de noite.",
       "list": {
         "suite": "1 suíte com cama box queen",
         "room": "1 quarto com 2 camas de solteiro e banheiro integrado",
@@ -171,15 +171,15 @@
       },
       "footer": "O espaço ideal para quem quer conforto e a liberdade de aproveitar o dia e a noite no seu próprio rooftop."
     },
-    "brisa": {
-      "name": "Brisa",
-      "carousel_title": "Casa 4 \"Brisa\"",
+    "casa_4": {
+      "name": "Casa 4",
+      "carousel_title": "Casa 4",
       "carousel_specs": "superior | Até 8 pessoas | 90m²",
-      "short_desc": "Mesma estrutura e charme da Casa Horizonte, com um solário gourmet privativo.",
-      "full_desc": "A Casa Brisa espelha a arquitetura deslumbrante da Casa Horizonte. Com ambientes divididos em dois andares, ela possui o charme do mezanino e o luxo do solarium gourmet privativo de 20m². É o espaço ideal para famílias maiores ou grupos de amigos que não abrem mão de conforto, brisa fresca e um rooftop exclusivo em Juquehy.",
+      "short_desc": "Mesma estrutura e charme da Casa 3, com um solário gourmet privativo.",
+      "full_desc": "A Casa 4 espelha a arquitetura deslumbrante da Casa 3. Com ambientes divididos em dois andares, ela possui o charme do mezanino e o luxo do solarium gourmet privativo de 20m². É o espaço ideal para famílias maiores ou grupos de amigos que não abrem mão de conforto, brisa fresca e um rooftop exclusivo em Juquehy.",
       "list": {
         "suite": "1 suíte com cama box queen",
-        "room": "1 quarto com duas camas de solteiro e banheiro integrado",
+        "room": "1 quarto com dos camas de solteiro e banheiro integrado",
         "living": "Sala de jantar e estar com conceito aberto e sofá-cama casal",
         "mezzanine": "Mezanino com TV conectada e sofá-cama casal",
         "ac": "Ar-condicionado em todos os ambientes",

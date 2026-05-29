@@ -21,20 +21,19 @@ export interface Accommodation {
   beds: Bed[];
   amenities: Amenity[];
   images: string[];
-  videoTourUrl: string;
   airbnbUrl: string;
   bookingUrl: string;
 }
 
 export const accommodationsData: Accommodation[] = [
   {
-    id: "areia",
-    name: "Areia",
+    id: "casa-1",
+    name: "Casa 1",
     typeKey: "accommodations.labels.ground",
     capacity: 6,
     size: 70,
-    shortDescriptionKey: "accommodations.areia.short_desc",
-    fullDescriptionKey: "accommodations.areia.full_desc",
+    shortDescriptionKey: "accommodations.casa_1.short_desc",
+    fullDescriptionKey: "accommodations.casa_1.full_desc",
     bedrooms: 2,
     bathrooms: 2,
     beds: [
@@ -57,18 +56,17 @@ export const accommodationsData: Accommodation[] = [
       "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1000&q=80"
     ],
-    videoTourUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     airbnbUrl: "https://airbnb.com",
     bookingUrl: "https://booking.com"
   },
   {
-    id: "mare",
-    name: "Maré",
+    id: "casa-2",
+    name: "Casa 2",
     typeKey: "accommodations.labels.ground",
     capacity: 7,
     size: 80,
-    shortDescriptionKey: "accommodations.mare.short_desc",
-    fullDescriptionKey: "accommodations.mare.full_desc",
+    shortDescriptionKey: "accommodations.casa_2.short_desc",
+    fullDescriptionKey: "accommodations.casa_2.full_desc",
     bedrooms: 2,
     bathrooms: 2,
     beds: [
@@ -92,18 +90,17 @@ export const accommodationsData: Accommodation[] = [
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80"
     ],
-    videoTourUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     airbnbUrl: "https://airbnb.com",
     bookingUrl: "https://booking.com"
   },
   {
-    id: "horizonte",
-    name: "Horizonte",
+    id: "casa-3",
+    name: "Casa 3",
     typeKey: "accommodations.labels.superior",
     capacity: 8,
     size: 90,
-    shortDescriptionKey: "accommodations.horizonte.short_desc",
-    fullDescriptionKey: "accommodations.horizonte.full_desc",
+    shortDescriptionKey: "accommodations.casa_3.short_desc",
+    fullDescriptionKey: "accommodations.casa_3.full_desc",
     bedrooms: 2,
     bathrooms: 2,
     beds: [
@@ -126,18 +123,17 @@ export const accommodationsData: Accommodation[] = [
       "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1000&q=80"
     ],
-    videoTourUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     airbnbUrl: "https://airbnb.com",
     bookingUrl: "https://booking.com"
   },
   {
-    id: "brisa",
-    name: "Brisa",
+    id: "casa-4",
+    name: "Casa 4",
     typeKey: "accommodations.labels.superior",
     capacity: 8,
     size: 90,
-    shortDescriptionKey: "accommodations.brisa.short_desc",
-    fullDescriptionKey: "accommodations.brisa.full_desc",
+    shortDescriptionKey: "accommodations.casa_4.short_desc",
+    fullDescriptionKey: "accommodations.casa_4.full_desc",
     bedrooms: 2,
     bathrooms: 2,
     beds: [
@@ -160,7 +156,6 @@ export const accommodationsData: Accommodation[] = [
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80"
     ],
-    videoTourUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     airbnbUrl: "https://airbnb.com",
     bookingUrl: "https://booking.com"
   }

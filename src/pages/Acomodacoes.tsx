@@ -21,6 +21,7 @@ import { accommodationsData } from "../data/accommodations";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { FloatingMenu } from "../components/layout/FloatingMenu";
+import { GeneralInfoSection } from "../components/sections/GeneralInfoSection";
 
 const iconMap = {
   wifi: Wifi,
@@ -43,20 +44,21 @@ export function Acomodacoes() {
   useEffect(() => {
     const element = hash ? document.getElementById(hash.replace("#", "")) : null;
     
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   }, [hash]);
 
   useEffect(() => {
     const params = new URLSearchParams(search);
     const galleryId = params.get("gallery");
     
-    if (galleryId) {
-      const acc = accommodationsData.find((a) => a.id === galleryId);
-      if (acc) {
-        setActiveGallery(acc.images);
-        setCurrentImageIndex(0);
-        document.body.style.overflow = "hidden";
-      }
+    const acc = accommodationsData.find((a) => a.id === galleryId);
+    
+    if (acc) {
+      setActiveGallery(acc.images);
+      setCurrentImageIndex(0);
+      document.body.style.overflow = "hidden";
     }
   }, [search]);
 
@@ -101,7 +103,7 @@ export function Acomodacoes() {
           muted
           loop
           playsInline
-          className="absolute inset-0 h-full w-full object-cover opacity-60 mix-blend-overlay"
+          className="absolute inset-0 h-full w-full object-cover scale-[1.05] blur-sm"
           poster="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1920&q=80"
         >
           <source
@@ -115,7 +117,7 @@ export function Acomodacoes() {
         <Header />
 
         <div className="relative z-20 flex flex-1 flex-col items-center justify-center px-6 pt-24 pb-24 text-center">
-          <h1 className="mb-6 text-4xl font-extrabold text-white drop-shadow-xl md:text-6xl lg:text-7xl">
+          <h1 className="mb-6 text-4xl font-semibold text-white drop-shadow-xl md:text-6xl lg:text-7xl">
             {t("accommodations.labels.subtitle")}
           </h1>
           <p className="text-xl font-medium text-white/95 drop-shadow-lg md:text-2xl">
@@ -131,6 +133,8 @@ export function Acomodacoes() {
           </button>
         </div>
       </section>
+
+      <GeneralInfoSection />
 
       <section className="w-full space-y-32 pb-32 pt-24 md:space-y-48">
         {accommodationsData.map((acc, index) => {
@@ -160,16 +164,6 @@ export function Acomodacoes() {
                         {t("common.buttons.view_gallery")}
                       </p>
                     </div>
-                    <button 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        openVideoModal("https://www.youtube.com/embed/WIfiR1yENi8?autoplay=1&modestbranding=1&rel=0");
-                      }}
-                      className="absolute bottom-6 right-6 flex items-center gap-2 rounded-full bg-[#304439]/90 px-6 py-3 text-sm font-bold text-[#FFD2A2] backdrop-blur-md transition hover:scale-105"
-                    >
-                      <Play className="h-4 w-4 fill-current" />
-                      {t("common.buttons.video_tour")}
-                    </button>
                   </div>
                 </div>
 

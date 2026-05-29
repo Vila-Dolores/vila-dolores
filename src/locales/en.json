@@ -115,12 +115,12 @@
       "tv_mezzanine": "TV in Mezzanine and Living Room",
       "garage": "1 Parking Space"
     },
-    "areia": {
-      "name": "Areia",
-      "carousel_title": "Villa 1 \"Areia\"",
+    "casa_1": {
+      "name": "Casa 1",
+      "carousel_title": "Casa 1",
       "carousel_specs": "ground floor | Up to 6 guests | 70m²",
       "short_desc": "Cozy and practical — perfect for smaller families.",
-      "full_desc": "Casa Areia, located on the ground floor, offers the perfect convenience for those who want to arrive from the beach, quickly settle in, and enjoy the environment without climbing stairs. The integrated small backyard brings a breath of fresh air and practicality, ideal for relaxing moments after a swim in the sea.",
+      "full_desc": "Casa 1, located on the ground floor, offers the perfect convenience for those who want to arrive from the beach, quickly settle in, and enjoy the environment without climbing stairs. The integrated small backyard brings a breath of fresh air and practicality, ideal for relaxing moments after a swim in the sea.",
       "list": {
         "suite": "1 suite with queen bed",
         "room": "1 bedroom with 2 single beds and integrated bathroom",
@@ -133,12 +133,12 @@
       },
       "footer": "Perfect for those who want to arrive, settle in properly and enjoy the sea without worries."
     },
-    "mare": {
-      "name": "Maré",
-      "carousel_title": "Villa 2 \"Maré\"",
+    "casa_2": {
+      "name": "Casa 2",
+      "carousel_title": "Casa 2",
       "carousel_specs": "ground floor | Up to 7 guests | 80m²",
       "short_desc": "Ample space with a private gourmet patio — to enjoy after the beach.",
-      "full_desc": "Casa Maré is the ground floor villa that elevates the living experience. The great differentiator is its private gourmet patio featuring a BBQ grill and an exclusive outdoor shower. It is the definitive environment for barbecues, laughter, and great outdoor moments with those you love, uniting the functionality of the interior with the delight of the outdoor area.",
+      "full_desc": "Casa 2 is the ground floor villa that elevates the living experience. The great differentiator is its private gourmet patio featuring a BBQ grill and an exclusive outdoor shower. It is the definitive environment for barbecues, laughter, and great outdoor moments with those you love, uniting the functionality of the interior with the delight of the outdoor area.",
       "list": {
         "suite": "1 suite with queen bed",
         "room": "1 bedroom with double bed + single bed and integrated bathroom",
@@ -152,12 +152,12 @@
       },
       "footer": "The perfect environment for barbecues, laughter and good times outdoors."
     },
-    "horizonte": {
-      "name": "Horizonte",
-      "carousel_title": "Villa 3 \"Horizonte\"",
+    "casa_3": {
+      "name": "Casa 3",
+      "carousel_title": "Casa 3",
       "carousel_specs": "upper floor | Up to 8 guests | 90m²",
       "short_desc": "More space across 2 floors, enhanced comfort, and a private gourmet solarium.",
-      "full_desc": "Casa Horizonte offers the refinement of a duplex residence. On the upper floor, you will enjoy a spacious mezzanine that serves as a second living area. The highlight of the villa is the impressive 20m² gourmet solarium, ensuring total privacy to enjoy the freedom of your own rooftop, day or night.",
+      "full_desc": "Casa 3 offers the refinement of a duplex residence. On the upper floor, you will enjoy a spacious mezzanine that serves as a second living area. The highlight of the villa is the impressive 20m² gourmet solarium, ensuring total privacy to enjoy the freedom of your own rooftop, day or night.",
       "list": {
         "suite": "1 suite with queen box bed",
         "room": "1 bedroom with 2 single beds and integrated bathroom",
@@ -171,12 +171,12 @@
       },
       "footer": "The ideal space for those who want comfort and the freedom to enjoy day and night on their own rooftop."
     },
-    "brisa": {
-      "name": "Brisa",
-      "carousel_title": "Villa 4 \"Brisa\"",
+    "casa_4": {
+      "name": "Casa 4",
+      "carousel_title": "Casa 4",
       "carousel_specs": "upper floor | Up to 8 guests | 90m²",
-      "short_desc": "The same structure and charm as Casa Horizonte, featuring a private gourmet solarium.",
-      "full_desc": "Casa Brisa mirrors the stunning architecture of Casa Horizonte. With spaces divided over two floors, it possesses the charm of the mezzanine and the luxury of the 20m² private gourmet solarium. It is the ideal space for larger families or groups of friends who do not compromise on comfort, fresh breezes, and an exclusive rooftop in Juquehy.",
+      "short_desc": "The same structure and charm as Casa 3, featuring a private gourmet solarium.",
+      "full_desc": "Casa 4 mirrors the stunning architecture of Casa 3. With spaces divided over two floors, it possesses the charm of the mezzanine and the luxury of the 20m² private gourmet solarium. It is the ideal space for larger families or groups of friends who do not compromise on comfort, fresh breezes, and an exclusive rooftop in Juquehy.",
       "list": {
         "suite": "1 suite with queen box bed",
         "room": "1 bedroom with two single beds and integrated bathroom",

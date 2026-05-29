@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router";
+import { ArrowRight } from "lucide-react";
 
 export function AccommodationsIntroSection() {
   const { t } = useTranslation();
@@ -14,13 +16,21 @@ export function AccommodationsIntroSection() {
           />
         </div>
         
-        <div className="z-10 flex w-full flex-1 flex-col justify-center bg-[#FAF9F6] p-10 shadow-xl md:-ml-16 md:p-16">
+        <div className="z-10 flex w-full flex-1 flex-col items-start justify-center bg-[#FAF9F6] p-10 shadow-xl md:-ml-16 md:p-16">
           <h2 className="mb-6 font-sans text-2xl font-extrabold tracking-tight text-[#304439] md:text-3xl">
             {t("accommodations_intro.title")}
           </h2>
-          <p className="font-sans text-base font-medium leading-relaxed text-[#304439]/90">
+          <p className="mb-10 font-sans text-base font-medium leading-relaxed text-[#304439]/90">
             {t("accommodations_intro.description")}
           </p>
+          
+          <Link
+            to="/acomodacoes"
+            className="flex items-center gap-3 rounded-full bg-[#304439] px-8 py-4 text-sm font-bold text-[#FFD2A2] shadow-xl transition-all hover:scale-105 hover:bg-[#202d26]"
+          >
+            {t("common.navigation.accommodations")}
+            <ArrowRight className="h-5 w-5" />
+          </Link>
         </div>
       </div>
     </section>
