@@ -69,8 +69,62 @@
   },
   "location": {
     "title": "UBICACIÓN PRIVILEGIADA",
-    "description_1": "Vila Dolores está ubicada a solo 500 metros de la playa, en la entrada 4, y a dos cuadras del centro comercial, a pocos pasos de todo lo que necesita.",
+    "description_1": "Vila Dolores está ubicada a solo 500 metros de la playa, en la entrada 3, y a dos cuadras del centro comercial, a pocos pasos de todo lo que necesita.",
     "description_2": "Supermercados, excelentes restaurantes, heladerías premium, panaderías, farmacias y centros comerciales, sin necesidad de sacar el auto del garaje."
+  },
+  "location_gallery": {
+    "title": "Todo cerca, a pocos pasos de la Vila",
+    "see_photo": "Ver Foto",
+    "items": {
+      "entrada": {
+        "name": "Entrada de Vila Dolores",
+        "desc": "La entrada encantadora de Vila Dolores"
+      },
+      "juquehy_shopping": {
+        "name": "Juquehy Shopping",
+        "desc": "Centro comercial al aire libre con moda playa y buena gastronomía, desde 1998"
+      },
+      "bistro_juquehy": {
+        "name": "Bistró Juquehy",
+        "desc": "Pescados, mariscos y dulces caseros con receta de la abuela"
+      },
+      "gulero": {
+        "name": "Restaurante Gulero",
+        "desc": "Mariscos en una casona histórica de 1867"
+      },
+      "parque_infantil": {
+        "name": "Parque Infantil",
+        "desc": "Espacio de diversión para los más chicos"
+      },
+      "supermarket": {
+        "name": "Supermercado",
+        "desc": "Todo lo que necesita, sin salir del barrio"
+      },
+      "costa_azul": {
+        "name": "Costa Azul Supermercado",
+        "desc": "Supermercado tradicional de la región, con más de 30 años de historia"
+      },
+      "tua_rua": {
+        "name": "Tienda Tua Rua",
+        "desc": "Tienda de ropa a pocos pasos de casa"
+      },
+      "monjolo": {
+        "name": "Shopping Monjolo",
+        "desc": "Tiendas, gastronomía y servicios en un solo lugar"
+      },
+      "freijo_pizza": {
+        "name": "Freijó Pizza Bar",
+        "desc": "Pizza artesanal en horno de leña, para comer con las manos"
+      },
+      "droga_center": {
+        "name": "Droga Center",
+        "desc": "Farmacia de la región para lo que necesite"
+      },
+      "padaria": {
+        "name": "Panadería A Portuguesinha",
+        "desc": "El lugar ideal para una coxinha y pan de queso fresquito"
+      }
+    }
   },
   "map_section": {
     "title": "CONFORT Y PRACTICIDAD",
@@ -86,7 +140,8 @@
       "superior": "planta alta",
       "capacity": "Hasta {{count}} huéspedes",
       "size": "{{size}}m²",
-      "explore_details": "Explore los detalles"
+      "explore_details": "Explore los detalles",
+      "beds_title": "Configuración de los ambientes"
     },
     "beds": {
       "queen": "Cama Queen",
@@ -94,6 +149,12 @@
       "single": "Cama Individual",
       "double": "Cama Doble",
       "sofa_bed": "Sofá Cama Doble"
+    },
+    "rooms": {
+      "suite": "en la suite",
+      "bedroom": "en la habitación",
+      "living": "en la sala",
+      "mezzanine": "en el mezzanine"
     },
     "amenities": {
       "air_conditioning_all": "Aire acondicionado en todas las habitaciones",
@@ -112,7 +173,7 @@
       "beach_kit": "Kit de playa (4 sillas + sombrilla)",
       "wifi": "Wi-Fi de alta velocidad",
       "smart_tv": "Smart TV conectada",
-      "tv_mezzanine": "TV en Mezzanine y Sala de estar",
+      "tv_mezzanine": "TV en Mezzanine",
       "garage": "1 Espacio de Estacionamiento"
     },
     "casa_1": {
@@ -120,7 +181,7 @@
       "carousel_title": "Casa 1",
       "carousel_specs": "planta baja | Hasta 6 huéspedes | 70m²",
       "short_desc": "Acogedora y práctica — perfecta para familias más pequeñas.",
-      "full_desc": "Casa 1, ubicada en la planta baja, ofrece la comodidad perfecta para quienes desean llegar de la playa, instalarse rápidamente y disfrutar del entorno sin subir escaleras. El pequeño patio integrado aporta un respiro de aire libre y practicidad, ideal para momentos relajantes después de un baño de mar.",
+      "full_desc": "Casa 1, ubicada en la planta baja, ofrece toda la comodidad para quienes desean llegar de la playa, instalarse con facilidad y disfrutar de la casa sin subir escaleras. Con 70 m², cuenta con cocina y salas integradas en un ambiente amplio, además de dos habitaciones y baños que garantizan practicidad y confort para toda la familia. El pequeño patio privado completa el espacio con un agradable respiro al aire libre.",
       "list": {
         "suite": "1 suite con cama queen",
         "room": "1 habitación con 2 camas individuales y baño integrado",
@@ -138,7 +199,7 @@
       "carousel_title": "Casa 2",
       "carousel_specs": "planta baja | Hasta 7 huéspedes | 80m²",
       "short_desc": "Amplio espacio con patio gourmet privado — para disfrutar después de la playa.",
-      "full_desc": "Casa 2 es la villa de planta baja que eleva la experiencia de convivencia. El gran diferencial es su patio gourmet privado con parrilla y ducha exterior exclusiva. Es el entorno definitivo para asados, risas y grandes momentos al aire libre con sus seres queridos, uniendo la funcionalidad del interior con el encanto del área exterior.",
+      "full_desc": "Casa 2, también ubicada en la planta baja, tiene como gran diferencial su amplio patio privado, con área de estar, parrilla y ducha exterior exclusivos. Además de los 70 m² de área interna, la casa gana ese espacio de convivencia al aire libre, perfecto para reunir a la familia, preparar un asado, relajarse y disfrutar de buenos momentos juntos. Una combinación deliciosa entre el confort y la practicidad de los ambientes internos y el placer de tener un área exterior única.",
       "list": {
         "suite": "1 suite con cama queen",
         "room": "1 habitación con cama doble + cama individual y baño integrado",
@@ -155,11 +216,11 @@
     "casa_3": {
       "name": "Casa 3",
       "carousel_title": "Casa 3",
-      "carousel_specs": "planta alta | Hasta 8 huéspedes | 90m²",
+      "carousel_specs": "planta alta | Hasta 8 huéspedes | 100m²",
       "short_desc": "Más espacio en 2 plantas, mayor confort y un solárium gourmet privado.",
-      "full_desc": "Casa 3 ofrece el refinamiento de una residencia dúplex. En la planta alta, disfrutará de un amplio mezzanine que funciona como una segunda sala de estar. El punto culminante de la villa es el impresionante solárium gourmet de 20m², garantizando total privacidad para disfrutar de la libertad de su propio rooftop, de día o de noche.",
+      "full_desc": "Casa 3 ofrece el encanto y la amplitud de una residencia dúplex. En la planta baja, la sala de estar, el comedor y la cocina integrados comparten el espacio con dos habitaciones amplias, en más de 70 m² de área interna. En la planta alta, el mezzanine crea un segundo ambiente de estar y da acceso a uno de los grandes diferenciales de la casa: el solárium privado de 20 m², con parrilla y ducha exterior exclusivos. Un espacio especial para relajarse, reunir a la familia y disfrutar de buenos momentos al aire libre, de día o de noche.",
       "list": {
-        "suite": "1 suite con cama box queen",
+        "suite": "1 suite con cama queen",
         "room": "1 habitación con 2 camas individuales y baño integrado",
         "living": "Comedor y sala de estar de concepto abierto y sofá cama doble",
         "mezzanine": "Mezzanine con TV conectada y sofá cama doble",
@@ -174,12 +235,12 @@
     "casa_4": {
       "name": "Casa 4",
       "carousel_title": "Casa 4",
-      "carousel_specs": "planta alta | Hasta 8 huéspedes | 90m²",
+      "carousel_specs": "planta alta | Hasta 8 huéspedes | 100m²",
       "short_desc": "La misma estructura y encanto que Casa 3, con un solárium gourmet privado.",
-      "full_desc": "Casa 4 refleja la impresionante arquitectura de Casa 3. Con espacios divididos en dos plantas, posee el encanto del mezzanine y el lujo del solárium gourmet privado de 20m². Es el espacio ideal para familias más grandes o grupos de amigos que no renuncian al confort, la brisa fresca y un rooftop exclusivo en Juquehy.",
+      "full_desc": "Casa 4 refleja la hermosa arquitectura dúplex de Casa 3, con ambientes amplios distribuidos en dos plantas. En la planta baja, hay más de 70 m² con sala de estar, comedor y cocina integrados, además de dos habitaciones confortables y dos baños. En la planta alta, el mezzanine amplía el espacio de convivencia y se integra al solárium privado de 20 m², creando un verdadero rooftop para disfrutar al aire libre. Una casa perfecta para familias o grupos de amigos que valoran el confort, la amplitud y un espacio exclusivo para disfrutar su estadía.",
       "list": {
-        "suite": "1 suite con cama box queen",
-        "room": "1 habitación con dos camas individuales y baño integrado",
+        "suite": "1 suite con cama queen",
+        "room": "1 habitación con 2 camas individuales y baño integrado",
         "living": "Comedor y sala de estar de concepto abierto y sofá cama doble",
         "mezzanine": "Mezzanine con TV conectada y sofá cama doble",
         "ac": "Aire acondicionado en todos los ambientes",
