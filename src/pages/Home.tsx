@@ -3,6 +3,7 @@ import { useLocation } from "react-router";
 import { HeroSection } from "../components/sections/HeroSection";
 import { AboutSection } from "../components/sections/AboutSection";
 import { LocationSection } from "../components/sections/LocationSection";
+import { LocationGallerySection } from "../components/sections/LocationGallerySection";
 import { AccommodationsIntroSection } from "../components/sections/AccommodationsIntroSection";
 import { FloatingMenu } from "../components/layout/FloatingMenu";
 import { Footer } from "../components/layout/Footer";
@@ -24,6 +25,7 @@ export function Home() {
       <HeroSection />
       <AboutSection />
       <LocationSection />
+      <LocationGallerySection />
       <AccommodationsIntroSection />
       <Footer />
       <FloatingMenu />
