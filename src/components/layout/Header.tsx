@@ -1,3 +1,4 @@
+const baseUrl = import.meta.env.VITE_URL_CLOUDFLARE;
 import { X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router";
@@ -111,9 +112,6 @@ export function Header() {
             >
               {t("common.navigation.contact")}
             </a>
-            
-            <div className="my-1 h-px w-full bg-white/10" />
-            <LanguageSwitcher />
           </nav>
         )}
       </div>
@@ -121,19 +119,23 @@ export function Header() {
       <div className="flex h-20 w-32 max-w-full items-center justify-center md:absolute md:left-1/2 md:top-0 md:h-32 md:w-48 md:-translate-x-1/2 md:translate-y-4 lg:h-48 lg:w-64">
         <Link to="/" className="block h-full w-full transition hover:opacity-80">
           <img
-            src="/logo-original.png"
+            src={`${baseUrl}/brand/logo-original.webp`}
             alt="Vila Dolores"
             className="h-full w-full object-contain"
           />
         </Link>
       </div>
 
-      <Link
-        to="/acomodacoes"
-        className="rounded-md bg-[#FFD2A2] px-4 py-2 font-sans text-xs font-bold text-[#304439] transition hover:brightness-110 md:px-6 md:py-3 md:text-sm"
-      >
-        {t("common.buttons.reserve")}
-      </Link>
+      <div className="flex items-center gap-3">
+        <LanguageSwitcher />
+
+        <Link
+          to="/acomodacoes"
+          className="rounded-md bg-[#FFD2A2] px-4 py-2 font-sans text-xs font-bold text-[#304439] transition hover:brightness-110 md:px-6 md:py-3 md:text-sm"
+        >
+          {t("common.buttons.reserve")}
+        </Link>
+      </div>
     </header>
   );
 }
