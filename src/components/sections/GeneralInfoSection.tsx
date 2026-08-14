@@ -1,3 +1,4 @@
+const baseUrl = import.meta.env.VITE_URL_CLOUDFLARE;
 import { MapPin, Car, Wifi, ShieldCheck, Droplets, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -54,7 +55,7 @@ export function GeneralInfoSection() {
 
         <div className="relative h-[500px] w-full flex-1 overflow-hidden rounded-xl shadow-2xl md:h-[600px]">
           <img
-            src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1000&q=80"
+            src={`${baseUrl}/praia/horizonte.webp`}
             alt="Vista do mar"
             className="h-full w-full object-cover"
           />
