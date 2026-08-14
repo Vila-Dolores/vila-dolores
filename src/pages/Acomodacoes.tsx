@@ -1,3 +1,4 @@
+const baseUrl = import.meta.env.VITE_URL_CLOUDFLARE;
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import {
@@ -12,6 +13,7 @@ import {
   Ruler,
   Users,
   Droplets,
+  Bed,
   X,
   ChevronLeft,
   ChevronRight
@@ -97,14 +99,14 @@ export function Acomodacoes() {
 
   return (
     <div className="relative size-full bg-[#FAF9F6] font-sans">
-      <section className="relative flex min-h-[75vh] w-full flex-col overflow-hidden bg-[#304439] md:min-h-[85vh]">
+      <section className="relative flex min-h-[85vh] w-full flex-col overflow-hidden bg-[#304439] md:min-h-[90vh]">
         <video
           autoPlay
           muted
           loop
           playsInline
           className="absolute inset-0 h-full w-full object-cover scale-[1.05] blur-sm"
-          poster="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1920&q=80"
+          poster={`${baseUrl}/praia/praia-ceu.webp`}
         >
           <source
             src="https://cdn.pixabay.com/video/2019/04/24/22998-332483011_large.mp4"
@@ -116,7 +118,7 @@ export function Acomodacoes() {
 
         <Header />
 
-        <div className="relative z-20 flex flex-1 flex-col items-center justify-center px-6 pt-24 pb-24 text-center">
+        <div className="relative z-20 flex flex-1 flex-col items-center justify-end px-6 pb-24 pt-56 text-center md:justify-center md:pt-64 lg:pt-72">
           <h1 className="mb-6 text-4xl font-semibold text-white drop-shadow-xl md:text-6xl lg:text-7xl">
             {t("accommodations.labels.subtitle")}
           </h1>
@@ -197,6 +199,19 @@ export function Acomodacoes() {
                   </p>
 
                   <div className="mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    {acc.beds.map((bed, bedIndex) => (
+                      <div
+                        key={`${bed.typeKey}-${bed.roomKey}-${bedIndex}`}
+                        className="flex items-center gap-3"
+                      >
+                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#304439]/5 text-[#304439]">
+                          <Bed className="h-6 w-6" />
+                        </div>
+                        <span className="text-sm font-bold text-[#304439]/90">
+                          {bed.quantity} {t(bed.typeKey)} {t(bed.roomKey)}
+                        </span>
+                      </div>
+                    ))}
                     {acc.amenities.map((item) => {
                       const Icon = iconMap[item.iconName as keyof typeof iconMap] || Sun;
                       return (
