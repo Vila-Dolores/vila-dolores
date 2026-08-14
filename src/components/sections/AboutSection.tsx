@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
+const baseUrl = import.meta.env.VITE_URL_CLOUDFLARE;
 
 export function AboutSection() {
   const { t } = useTranslation();
@@ -10,7 +11,7 @@ export function AboutSection() {
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
           <div className="relative h-[400px] w-full overflow-hidden rounded-xl md:h-[500px]">
             <img
-              src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1000&q=80"
+              src={`${baseUrl}/area-externa/entrada-logo-ia.webp`}
               alt="House Apartments"
               className="h-full w-full object-cover"
             />
@@ -54,7 +55,7 @@ export function AboutSection() {
           </div>
           <div className="order-1 relative h-[400px] w-full overflow-hidden rounded-xl md:order-2 md:h-[500px]">
             <img
-              src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1000&q=80"
+              src={`${baseUrl}/praia/IMG_3691.webp`}
               alt="Praia de Juquehy"
               className="h-full w-full object-cover"
             />
