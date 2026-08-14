@@ -69,8 +69,62 @@
   },
   "location": {
     "title": "PRIME LOCATION",
-    "description_1": "Vila Dolores is located just 500 meters from the beach at entrance 4, and two blocks from the commercial center, steps away from everything you need.",
+    "description_1": "Vila Dolores is located just 500 meters from the beach at entrance 3, and two blocks from the commercial center, steps away from everything you need.",
     "description_2": "Supermarkets, exquisite restaurants, premium ice cream parlors, bakeries, pharmacies, and shopping centers—all accessible without leaving the garage."
+  },
+  "location_gallery": {
+    "title": "Everything nearby, just steps from the Vila",
+    "see_photo": "View Photo",
+    "items": {
+      "entrada": {
+        "name": "Vila Dolores Entrance",
+        "desc": "The charming entrance to Vila Dolores"
+      },
+      "juquehy_shopping": {
+        "name": "Juquehy Shopping",
+        "desc": "Open-air shopping center with beachwear and great dining, since 1998"
+      },
+      "bistro_juquehy": {
+        "name": "Bistrô Juquehy",
+        "desc": "Fish, seafood and homemade sweets made with grandma's recipe"
+      },
+      "gulero": {
+        "name": "Gulero Restaurant",
+        "desc": "Seafood in a historic 1867 mansion"
+      },
+      "parque_infantil": {
+        "name": "Playground",
+        "desc": "A fun spot for the kids"
+      },
+      "supermarket": {
+        "name": "Supermarket",
+        "desc": "Everything you need, right in the neighborhood"
+      },
+      "costa_azul": {
+        "name": "Costa Azul Supermarket",
+        "desc": "The area's traditional supermarket, with over 30 years of history"
+      },
+      "tua_rua": {
+        "name": "Tua Rua Store",
+        "desc": "A clothing store just steps from home"
+      },
+      "monjolo": {
+        "name": "Monjolo Shopping",
+        "desc": "Shops, dining and services all in one place"
+      },
+      "freijo_pizza": {
+        "name": "Freijó Pizza Bar",
+        "desc": "Wood-fired artisanal pizza, eaten with your hands"
+      },
+      "droga_center": {
+        "name": "Droga Center Pharmacy",
+        "desc": "The local pharmacy for whatever you need"
+      },
+      "padaria": {
+        "name": "A Portuguesinha Bakery",
+        "desc": "The go-to spot for fresh coxinha and pão de queijo"
+      }
+    }
   },
   "map_section": {
     "title": "COMFORT AND CONVENIENCE",
@@ -86,7 +140,8 @@
       "superior": "upper floor",
       "capacity": "Up to {{count}} guests",
       "size": "{{size}}m²",
-      "explore_details": "Explore the details"
+      "explore_details": "Explore the details",
+      "beds_title": "Room configuration"
     },
     "beds": {
       "queen": "Queen Bed",
@@ -94,6 +149,12 @@
       "single": "Single Bed",
       "double": "Double Bed",
       "sofa_bed": "Double Sofa Bed"
+    },
+    "rooms": {
+      "suite": "in the suite",
+      "bedroom": "in the bedroom",
+      "living": "in the living room",
+      "mezzanine": "in the mezzanine"
     },
     "amenities": {
       "air_conditioning_all": "Air conditioning in all rooms",
@@ -112,7 +173,7 @@
       "beach_kit": "Beach kit (4 chairs + parasol)",
       "wifi": "High-speed Wi-Fi",
       "smart_tv": "Connected Smart TV",
-      "tv_mezzanine": "TV in Mezzanine and Living Room",
+      "tv_mezzanine": "TV in the Mezzanine",
       "garage": "1 Parking Space"
     },
     "casa_1": {
@@ -120,7 +181,7 @@
       "carousel_title": "Casa 1",
       "carousel_specs": "ground floor | Up to 6 guests | 70m²",
       "short_desc": "Cozy and practical — perfect for smaller families.",
-      "full_desc": "Casa 1, located on the ground floor, offers the perfect convenience for those who want to arrive from the beach, quickly settle in, and enjoy the environment without climbing stairs. The integrated small backyard brings a breath of fresh air and practicality, ideal for relaxing moments after a swim in the sea.",
+      "full_desc": "Casa 1, located on the ground floor, offers full convenience for those who want to arrive from the beach, settle in easily, and enjoy the house without climbing stairs. At 70 m², it features an integrated kitchen and living area in a spacious environment, plus two bedrooms and bathrooms that ensure practicality and comfort for the whole family. The small private backyard rounds out the space with a pleasant breath of fresh air.",
       "list": {
         "suite": "1 suite with queen bed",
         "room": "1 bedroom with 2 single beds and integrated bathroom",
@@ -138,7 +199,7 @@
       "carousel_title": "Casa 2",
       "carousel_specs": "ground floor | Up to 7 guests | 80m²",
       "short_desc": "Ample space with a private gourmet patio — to enjoy after the beach.",
-      "full_desc": "Casa 2 is the ground floor villa that elevates the living experience. The great differentiator is its private gourmet patio featuring a BBQ grill and an exclusive outdoor shower. It is the definitive environment for barbecues, laughter, and great outdoor moments with those you love, uniting the functionality of the interior with the delight of the outdoor area.",
+      "full_desc": "Casa 2, also located on the ground floor, has as its great differentiator a spacious private patio with a living area, BBQ grill, and exclusive outdoor shower. In addition to the 70 m² of interior space, the house gains this outdoor living area, perfect for gathering the family, preparing a barbecue, relaxing, and enjoying great moments together. A delightful combination of the comfort and practicality of the interior spaces with the pleasure of a unique outdoor area.",
       "list": {
         "suite": "1 suite with queen bed",
         "room": "1 bedroom with double bed + single bed and integrated bathroom",
@@ -155,11 +216,11 @@
     "casa_3": {
       "name": "Casa 3",
       "carousel_title": "Casa 3",
-      "carousel_specs": "upper floor | Up to 8 guests | 90m²",
+      "carousel_specs": "upper floor | Up to 8 guests | 100m²",
       "short_desc": "More space across 2 floors, enhanced comfort, and a private gourmet solarium.",
-      "full_desc": "Casa 3 offers the refinement of a duplex residence. On the upper floor, you will enjoy a spacious mezzanine that serves as a second living area. The highlight of the villa is the impressive 20m² gourmet solarium, ensuring total privacy to enjoy the freedom of your own rooftop, day or night.",
+      "full_desc": "Casa 3 offers the charm and spaciousness of a duplex residence. On the lower floor, the integrated living, dining, and kitchen areas share the space with two spacious bedrooms, across more than 70 m² of interior space. On the upper floor, the mezzanine creates a second living area and provides access to one of the house's great differentiators: the private 20 m² solarium, with an exclusive BBQ grill and outdoor shower. A special space to relax, gather the family, and enjoy great moments outdoors, day or night.",
       "list": {
-        "suite": "1 suite with queen box bed",
+        "suite": "1 suite with queen bed",
         "room": "1 bedroom with 2 single beds and integrated bathroom",
         "living": "Open concept dining and living room and double sofa bed",
         "mezzanine": "Mezzanine with connected TV and double sofa bed",
@@ -174,12 +235,12 @@
     "casa_4": {
       "name": "Casa 4",
       "carousel_title": "Casa 4",
-      "carousel_specs": "upper floor | Up to 8 guests | 90m²",
+      "carousel_specs": "upper floor | Up to 8 guests | 100m²",
       "short_desc": "The same structure and charm as Casa 3, featuring a private gourmet solarium.",
-      "full_desc": "Casa 4 mirrors the stunning architecture of Casa 3. With spaces divided over two floors, it possesses the charm of the mezzanine and the luxury of the 20m² private gourmet solarium. It is the ideal space for larger families or groups of friends who do not compromise on comfort, fresh breezes, and an exclusive rooftop in Juquehy.",
+      "full_desc": "Casa 4 mirrors the beautiful duplex architecture of Casa 3, with spacious environments spread across two floors. On the lower floor, there's more than 70 m² with an integrated living, dining, and kitchen area, plus two comfortable bedrooms and two bathrooms. On the upper floor, the mezzanine expands the living space and connects to the private 20 m² solarium, creating a true rooftop to enjoy outdoors. A perfect house for families or groups of friends who value comfort, spaciousness, and an exclusive space to enjoy their stay.",
       "list": {
-        "suite": "1 suite with queen box bed",
-        "room": "1 bedroom with two single beds and integrated bathroom",
+        "suite": "1 suite with queen bed",
+        "room": "1 bedroom with 2 single beds and integrated bathroom",
         "living": "Open concept dining and living room and double sofa bed",
         "mezzanine": "Mezzanine with connected TV and double sofa bed",
         "ac": "Air conditioning in all environments",
