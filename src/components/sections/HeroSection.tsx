@@ -1,3 +1,4 @@
+const baseUrl = import.meta.env.VITE_URL_CLOUDFLARE;
 import { MapPin, Navigation, Store } from "lucide-react";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
@@ -15,7 +16,7 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-[#304439] font-sans flex flex-col" id="hero">
       <img
-        src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1920&q=80"
+        src={`${baseUrl}/praia/praia-por-sol.webp`}
         alt="Praia próxima da Vila Dolores"
         className="absolute inset-0 h-full w-full object-cover"
       />
