@@ -1,3 +1,4 @@
+const baseUrl = import.meta.env.VITE_URL_CLOUDFLARE;
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
@@ -10,7 +11,7 @@ export function AccommodationsIntroSection() {
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-0 px-8 md:flex-row md:px-16">
         <div className="relative h-[400px] w-full flex-1 overflow-hidden shadow-2xl md:h-[550px]">
           <img
-            src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80"
+            src={`${baseUrl}/area-externa/entrada-longe.webp`}
             alt="Facilidades das acomodações"
             className="h-full w-full object-cover"
           />
