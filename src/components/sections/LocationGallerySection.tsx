@@ -1,5 +1,5 @@
 const baseUrl = import.meta.env.VITE_URL_CLOUDFLARE;
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -34,6 +34,16 @@ export function LocationGallerySection() {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Pré-carrega todas as fotos do carrossel assim que a seção aparece,
+  // para que rolar para a direita/esquerda ou abrir o lightbox seja
+  // instantâneo, sem esperar o download de cada foto.
+  useEffect(() => {
+    galleryPhotos.forEach((photo) => {
+      const preloadImg = new Image();
+      preloadImg.src = photoUrl(photo.file);
+    });
+  }, []);
 
   const openLightbox = (index: number) => {
     setActiveIndex(index);

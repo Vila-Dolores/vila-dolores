@@ -64,6 +64,21 @@ export function Acomodacoes() {
     }
   }, [search]);
 
+  // Pré-carrega a foto anterior e a seguinte assim que o lightbox abre
+  // ou o usuário navega, para que o clique nas setas troque a imagem
+  // instantaneamente em vez de esperar o download.
+  useEffect(() => {
+    if (!activeGallery || activeGallery.length <= 1) return;
+
+    const nextIndex = (currentImageIndex + 1) % activeGallery.length;
+    const prevIndex = (currentImageIndex - 1 + activeGallery.length) % activeGallery.length;
+
+    [nextIndex, prevIndex].forEach((index) => {
+      const preloadImg = new Image();
+      preloadImg.src = activeGallery[index];
+    });
+  }, [activeGallery, currentImageIndex]);
+
   const openVideoModal = (url: string) => {
     setActiveVideoUrl(url);
     document.body.style.overflow = "hidden";
@@ -106,7 +121,7 @@ export function Acomodacoes() {
           loop
           playsInline
           className="absolute inset-0 h-full w-full object-cover scale-[1.05] blur-sm"
-          poster={`${baseUrl}/praia/praia-ceu.webp`}
+          poster={`${baseUrl}/praia/IMG_8906.webp`}
         >
           <source
             src="https://cdn.pixabay.com/video/2019/04/24/22998-332483011_large.mp4"
