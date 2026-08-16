@@ -20,14 +20,14 @@ const galleryPhotos: GalleryPhoto[] = [
   { file: "costa-azul-supermercado.webp", labelKey: "location_gallery.items.costa_azul.name", descKey: "location_gallery.items.costa_azul.desc" },
   { file: "tua-rua-loja.webp", labelKey: "location_gallery.items.tua_rua.name", descKey: "location_gallery.items.tua_rua.desc" },
   { file: "monjolo.webp", labelKey: "location_gallery.items.monjolo.name", descKey: "location_gallery.items.monjolo.desc" },
-  { file: "freijo-pizza.webp", labelKey: "location_gallery.items.freijo_pizza.name", descKey: "location_gallery.items.freijo_pizza.desc" },
+  { file: "freijó-pizza.webp", labelKey: "location_gallery.items.freijo_pizza.name", descKey: "location_gallery.items.freijo_pizza.desc" },
   { file: "freijó-pizza-placa.webp", labelKey: "location_gallery.items.freijo_pizza.name", descKey: "location_gallery.items.freijo_pizza.desc" },
   { file: "droga-center.webp", labelKey: "location_gallery.items.droga_center.name", descKey: "location_gallery.items.droga_center.desc" },
   { file: "padadaria-A-Portuguesinha.webp", labelKey: "location_gallery.items.padaria.name", descKey: "location_gallery.items.padaria.desc" },
 ];
 
 function photoUrl(file: string) {
-  return `${baseUrl}/entorno/${encodeURIComponent(file)}`;
+  return `${baseUrl}/entorno/thumbs/${encodeURIComponent(file)}`;
 }
 
 export function LocationGallerySection() {
