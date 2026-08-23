@@ -1,0 +1,255 @@
+{
+  "common": {
+    "buttons": {
+      "reserve": "Book Now",
+      "see_more": "Discover More",
+      "watch_full_video": "WATCH FULL VIDEO",
+      "video_tour": "Video Tour",
+      "see_all_photos": "View all photos",
+      "book_airbnb": "Book via Airbnb",
+      "book_booking": "View on Booking",
+      "view_gallery": "View Gallery",
+      "check_availability": "Check Availability →",
+      "make_reservation": "MAKE A RESERVATION"
+    },
+    "navigation": {
+      "home": "Home",
+      "accommodations": "Our Villas",
+      "location": "Location",
+      "airbnb": "Airbnb",
+      "booking": "Booking",
+      "contact": "Direct Contact"
+    },
+    "footer": {
+      "description": "Vila Dolores is an exclusive collection of four house apartments in Juquehy. The perfect balance between the warmth of a home and the sophistication of high-end hospitality.",
+      "address": "Av João Luiz Faustino, 420\nJuquehy, São Sebastião - SP, Brazil",
+      "rights": "© 2026 Vila Dolores. All rights reserved."
+    }
+  },
+  "hero": {
+    "subtitle": "YOUR PRIVATE REFUGE IN JUQUEHY",
+    "title": "Vila Dolores",
+    "headline_1": "House apartments in Juquehy:",
+    "headline_2": "comfort of home, practicality of a loft",
+    "quote": "\"In the 80s, our grandmother Dolores brought us to Juquehy for the first time. Back then, the beach was a well-kept secret, with few houses and residents. Decades later, we transformed that memory into a space that celebrates warmth and family time, making those who stay here feel at home, even when away from home.\"",
+    "cards": {
+      "location": "Prime location",
+      "beach_distance": "500m from the beach",
+      "center_distance": "2 blocks from downtown"
+    }
+  },
+  "about": {
+    "title": "HOUSE APARTMENTS",
+    "desc_1": "Vila Dolores is an exclusive collection of four house apartments that combine the comfort and privacy of a home with the practicality and functionality of a modern loft.",
+    "desc_2": "Each unit has been carefully designed to offer spacious, fully equipped, and welcoming environments that balance design and coziness, ideal for those seeking days of rest and fun with family or friends.",
+    "desc_3": "Check \"Our Villas\" to find the ideal configuration for you!",
+    "beach_title": "THE BEACH",
+    "beach_desc_1": "With over 3 km in length, Juquehy features a wide strip of fine white sand, transparent blue waters, and a sunset that invites you to stay on the beach.",
+    "beach_desc_2": "From surfing to the tranquility of a delightful sea bath, the beach also attracts athletes who enjoy running, playing ball, frescobol, and cycling.",
+    "beach_desc_3": "A family-friendly environment that will enchant you!"
+  },
+  "accommodations_intro": {
+    "title": "See which accommodation is ideal for you!",
+    "description": "Explore the amenities and layouts of our units. Each offers a unique space for you to relax and enjoy special moments. Discover the facilities and cozy environments we have prepared for you. Browse the photo gallery and find the perfect place for your stay."
+  },
+  "general_info": {
+    "title": "General Information",
+    "location_label": "Location:",
+    "location_desc": "500 meters from the beach — an easy, peaceful walk",
+    "parking_label": "Parking:",
+    "parking_desc": "1 exclusive parking space per house",
+    "wifi_label": "Connectivity:",
+    "wifi_desc": "Wi-Fi available in all units (great for remote work or streaming)",
+    "security_label": "Security:",
+    "security_desc": "outdoor area monitored by 24h cameras, keypad locks",
+    "shower_label": "Outdoor Shower:",
+    "shower_desc": "external shower with foot wash",
+    "schedule_label": "Schedule:",
+    "schedule_desc": "Check-in: 3:00 PM / Check-out: 11:00 AM"
+  },
+  "location": {
+    "title": "PRIME LOCATION",
+    "description_1": "Vila Dolores is located just 500 meters from the beach at entrance 3, and two blocks from the commercial center, steps away from everything you need.",
+    "description_2": "Supermarkets, exquisite restaurants, premium ice cream parlors, bakeries, pharmacies, and shopping centers—all accessible without leaving the garage."
+  },
+  "location_gallery": {
+    "title": "Everything nearby, just steps from the Vila",
+    "see_photo": "View Photo",
+    "items": {
+      "entrada": {
+        "name": "Vila Dolores Entrance",
+        "desc": "The charming entrance to Vila Dolores"
+      },
+      "juquehy_shopping": {
+        "name": "Juquehy Shopping",
+        "desc": "Open-air shopping center with beachwear and great dining, since 1998"
+      },
+      "bistro_juquehy": {
+        "name": "Bistrô Juquehy",
+        "desc": "Fish, seafood and homemade sweets made with grandma's recipe"
+      },
+      "gulero": {
+        "name": "Gulero Restaurant",
+        "desc": "Seafood in a historic 1867 mansion"
+      },
+      "parque_infantil": {
+        "name": "Playground",
+        "desc": "A fun spot for the kids"
+      },
+      "supermarket": {
+        "name": "Supermarket",
+        "desc": "Everything you need, right in the neighborhood"
+      },
+      "costa_azul": {
+        "name": "Costa Azul Supermarket",
+        "desc": "The area's traditional supermarket, with over 30 years of history"
+      },
+      "tua_rua": {
+        "name": "Tua Rua Store",
+        "desc": "A clothing store just steps from home"
+      },
+      "monjolo": {
+        "name": "Monjolo Shopping",
+        "desc": "Shops, dining and services all in one place"
+      },
+      "freijo_pizza": {
+        "name": "Freijó Pizza Bar",
+        "desc": "Wood-fired artisanal pizza, eaten with your hands"
+      },
+      "droga_center": {
+        "name": "Droga Center Pharmacy",
+        "desc": "The local pharmacy for whatever you need"
+      },
+      "padaria": {
+        "name": "A Portuguesinha Bakery",
+        "desc": "The go-to spot for fresh coxinha and pão de queijo"
+      }
+    }
+  },
+  "map_section": {
+    "title": "COMFORT AND CONVENIENCE",
+    "desc_1": "500 meters from the beach and close to the commercial center,",
+    "desc_2": "just a few blocks from everything you need:",
+    "desc_3": "supermarkets, excellent restaurants, great ice cream parlors,",
+    "desc_4": "bakeries, pharmacies, and shopping centers."
+  },
+  "accommodations": {
+    "labels": {
+      "subtitle": "Our accommodations",
+      "ground": "ground floor",
+      "superior": "upper floor",
+      "capacity": "Up to {{count}} guests",
+      "size": "{{size}}m²",
+      "explore_details": "Explore the details",
+      "beds_title": "Room configuration"
+    },
+    "beds": {
+      "queen": "Queen Bed",
+      "box_queen": "Queen Box Bed",
+      "single": "Single Bed",
+      "double": "Double Bed",
+      "sofa_bed": "Double Sofa Bed"
+    },
+    "rooms": {
+      "suite": "in the suite",
+      "bedroom": "in the bedroom",
+      "living": "in the living room",
+      "mezzanine": "in the mezzanine"
+    },
+    "amenities": {
+      "air_conditioning_all": "Air conditioning in all rooms",
+      "air_conditioning_environments": "Air conditioning in all areas",
+      "air_conditioning_rooms": "Air conditioning throughout",
+      "kitchen_6": "Fully equipped kitchen for 6 guests",
+      "kitchen_7": "Fully equipped kitchen for 7 guests",
+      "kitchen_8": "Fully equipped kitchen for 8 guests",
+      "backyard": "Private backyard (8m²)",
+      "gourmet_patio": "Private gourmet patio",
+      "gourmet_solarium": "Private gourmet solarium (20m²)",
+      "bbq_shower": "BBQ grill and outdoor shower",
+      "rooftop_shower": "Rooftop outdoor shower",
+      "exclusive_shower": "Exclusive outdoor shower",
+      "washer": "Laundry with washing machine",
+      "beach_kit": "Beach kit (4 chairs + parasol)",
+      "wifi": "High-speed Wi-Fi",
+      "smart_tv": "Connected Smart TV",
+      "tv_mezzanine": "TV in the Mezzanine",
+      "garage": "1 Parking Space"
+    },
+    "casa_1": {
+      "name": "Casa 1",
+      "carousel_title": "Casa 1",
+      "carousel_specs": "ground floor | Up to 6 guests | 70m²",
+      "short_desc": "Cozy and practical — perfect for smaller families.",
+      "full_desc": "Casa 1, located on the ground floor, offers full convenience for those who want to arrive from the beach, settle in easily, and enjoy the house without climbing stairs. At 70 m², it features an integrated kitchen and living area in a spacious environment, plus two bedrooms and bathrooms that ensure practicality and comfort for the whole family. The small private backyard rounds out the space with a pleasant breath of fresh air.",
+      "list": {
+        "suite": "1 suite with queen bed",
+        "room": "1 bedroom with 2 single beds and integrated bathroom",
+        "living": "Open concept dining and living room, double sofa bed and connected TV",
+        "ac": "Air conditioning in all rooms",
+        "kitchen": "Kitchen equipped with cooktop, refrigerator, microwave and utensils for 6 guests",
+        "backyard": "Small backyard (8 m²)",
+        "washer": "Laundry with washing machine",
+        "kit": "Beach kit: 4 chairs + parasol"
+      },
+      "footer": "Perfect for those who want to arrive, settle in properly and enjoy the sea without worries."
+    },
+    "casa_2": {
+      "name": "Casa 2",
+      "carousel_title": "Casa 2",
+      "carousel_specs": "ground floor | Up to 7 guests | 80m²",
+      "short_desc": "Ample space with a private gourmet patio — to enjoy after the beach.",
+      "full_desc": "Casa 2, also located on the ground floor, has as its great differentiator a spacious private patio with a living area, BBQ grill, and exclusive outdoor shower. In addition to the 70 m² of interior space, the house gains this outdoor living area, perfect for gathering the family, preparing a barbecue, relaxing, and enjoying great moments together. A delightful combination of the comfort and practicality of the interior spaces with the pleasure of a unique outdoor area.",
+      "list": {
+        "suite": "1 suite with queen bed",
+        "room": "1 bedroom with double bed + single bed and integrated bathroom",
+        "living": "Open concept dining and living room, double sofa bed and connected TV",
+        "ac": "Air conditioning in all environments",
+        "kitchen": "Kitchen equipped with cooktop, refrigerator, microwave and utensils for 7 guests",
+        "washer": "Laundry with washing machine",
+        "patio": "Private gourmet patio with BBQ grill",
+        "shower": "Exclusive outdoor shower",
+        "kit": "Beach kit: 4 chairs + parasol"
+      },
+      "footer": "The perfect environment for barbecues, laughter and good times outdoors."
+    },
+    "casa_3": {
+      "name": "Casa 3",
+      "carousel_title": "Casa 3",
+      "carousel_specs": "upper floor | Up to 8 guests | 100m²",
+      "short_desc": "More space across 2 floors, enhanced comfort, and a private gourmet solarium.",
+      "full_desc": "Casa 3 offers the charm and spaciousness of a duplex residence. On the lower floor, the integrated living, dining, and kitchen areas share the space with two spacious bedrooms, across more than 70 m² of interior space. On the upper floor, the mezzanine creates a second living area and provides access to one of the house's great differentiators: the private 20 m² solarium, with an exclusive BBQ grill and outdoor shower. A special space to relax, gather the family, and enjoy great moments outdoors, day or night.",
+      "list": {
+        "suite": "1 suite with queen bed",
+        "room": "1 bedroom with 2 single beds and integrated bathroom",
+        "living": "Open concept dining and living room and double sofa bed",
+        "mezzanine": "Mezzanine with connected TV and double sofa bed",
+        "ac": "Air conditioning in all environments",
+        "kitchen": "Kitchen equipped with cooktop, refrigerator, microwave and utensils for 8 guests",
+        "washer": "Laundry with washing machine",
+        "solarium": "20m² gourmet solarium with outdoor shower",
+        "kit": "Beach kit: 4 chairs + parasol"
+      },
+      "footer": "The ideal space for those who want comfort and the freedom to enjoy day and night on their own rooftop."
+    },
+    "casa_4": {
+      "name": "Casa 4",
+      "carousel_title": "Casa 4",
+      "carousel_specs": "upper floor | Up to 8 guests | 100m²",
+      "short_desc": "The same structure and charm as Casa 3, featuring a private gourmet solarium.",
+      "full_desc": "Casa 4 mirrors the beautiful duplex architecture of Casa 3, with spacious environments spread across two floors. On the lower floor, there's more than 70 m² with an integrated living, dining, and kitchen area, plus two comfortable bedrooms and two bathrooms. On the upper floor, the mezzanine expands the living space and connects to the private 20 m² solarium, creating a true rooftop to enjoy outdoors. A perfect house for families or groups of friends who value comfort, spaciousness, and an exclusive space to enjoy their stay.",
+      "list": {
+        "suite": "1 suite with queen bed",
+        "room": "1 bedroom with 2 single beds and integrated bathroom",
+        "living": "Open concept dining and living room and double sofa bed",
+        "mezzanine": "Mezzanine with connected TV and double sofa bed",
+        "ac": "Air conditioning in all environments",
+        "kitchen": "Kitchen equipped with cooktop, refrigerator, microwave and utensils for 8 guests",
+        "washer": "Laundry with washing machine",
+        "solarium": "20m² gourmet solarium with outdoor shower",
+        "kit": "Beach kit: 4 chairs + parasol"
+      },
+      "footer": "The ideal space for those who want comfort and the freedom to enjoy day and night on their own rooftop."
+    }
+  }
+}

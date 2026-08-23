@@ -1,27 +1,33 @@
+import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
+const baseUrl = import.meta.env.VITE_URL_CLOUDFLARE;
+
 export function AboutSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full bg-[#304439] py-24 font-sans">
       <div className="mx-auto flex max-w-7xl flex-col gap-24 px-8 md:px-16">
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
           <div className="relative h-[400px] w-full overflow-hidden rounded-xl md:h-[500px]">
             <img
-              src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1000&q=80"
+              src={`${baseUrl}/area-externa/entrada-logo-ia.webp`}
               alt="House Apartments"
               className="h-full w-full object-cover"
             />
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="mb-6 font-sans text-3xl font-extrabold tracking-tight text-[#FFD2A2] md:text-4xl">
-              HOUSE APARTMENTS
+              {t("about.title")}
             </h2>
             <p className="mb-4 font-sans text-lg font-medium leading-relaxed text-white/80">
-              A Vila Dolores é um conjunto exclusivo de quatro house apartments que unem o conforto e a privacidade de uma casa à praticidade e funcionalidade de um loft moderno.
+              {t("about.desc_1")}
             </p>
             <p className="mb-6 font-sans text-lg font-medium leading-relaxed text-white/80">
-              Cada unidade foi cuidadosamente projetada para oferecer ambientes amplos, equipados e acolhedores, que equilibram design e aconchego, ideais para quem busca dias de descanso e diversão com a família ou amigos.
+              {t("about.desc_2")}
             </p>
             <p className="font-sans text-lg font-bold text-[#FFD2A2]">
-              Veja em "Nossas Acomodações" a configuração ideal para você!
+              {t("about.desc_3")}
             </p>
           </div>
         </div>
@@ -29,27 +35,27 @@ export function AboutSection() {
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
           <div className="order-2 flex flex-col justify-center rounded-xl bg-[#FFD2A2] p-10 md:order-1 md:p-14">
             <h2 className="mb-6 font-sans text-3xl font-extrabold tracking-tight text-[#304439] md:text-4xl">
-              A PRAIA
+              {t("about.beach_title")}
             </h2>
             <p className="mb-4 font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
-              Com mais de 3 km de extensão, Juquehy tem ampla faixa de areia branca e fina, um mar azul transparente e um pôr do sol que convida a ficar na praia.
+              {t("about.beach_desc_1")}
             </p>
             <p className="mb-4 font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
-              Do surf à tranquilidade de um banho de mar delicioso, a praia ainda atrai esportistas que gostam de correr, jogar bola, frescobol e andar de bike.
+              {t("about.beach_desc_2")}
             </p>
             <p className="mb-8 font-sans text-lg font-medium leading-relaxed text-[#304439]/90">
-              Ambiente familiar que vai encantar você!
+              {t("about.beach_desc_3")}
             </p>
-            <button
-              type="button"
+            <Link
+              to="/acomodacoes"
               className="self-start rounded-md bg-[#304439] px-7 py-4 font-sans text-base font-bold text-[#FFD2A2] transition hover:brightness-110"
             >
-              FAÇA SUA RESERVA
-            </button>
+              {t("common.buttons.make_reservation")}
+            </Link>
           </div>
           <div className="order-1 relative h-[400px] w-full overflow-hidden rounded-xl md:order-2 md:h-[500px]">
             <img
-              src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1000&q=80"
+              src={`${baseUrl}/praia/IMG_3691.webp`}
               alt="Praia de Juquehy"
               className="h-full w-full object-cover"
             />

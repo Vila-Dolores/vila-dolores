@@ -1,0 +1,255 @@
+{
+  "common": {
+    "buttons": {
+      "reserve": "Reserve Já",
+      "see_more": "Ver Mais",
+      "watch_full_video": "ASSISTIR VÍDEO COMPLETO",
+      "video_tour": "Video Tour",
+      "see_all_photos": "Ver todas as fotos",
+      "book_airbnb": "Reservar via Airbnb",
+      "book_booking": "Ver no Booking",
+      "view_gallery": "Ver Galeria",
+      "check_availability": "Ver Disponibilidade →",
+      "make_reservation": "FAÇA SUA RESERVA"
+    },
+    "navigation": {
+      "home": "Página Inicial",
+      "accommodations": "Nossas Acomodações",
+      "location": "Localização",
+      "airbnb": "Airbnb",
+      "booking": "Booking",
+      "contact": "Contato Direto"
+    },
+    "footer": {
+      "description": "A Vila Dolores é um conjunto exclusivo de quatro house apartments em Juquehy. O equilíbrio perfeito entre o aconchego de uma casa e a sofisticação da hospitalidade de alto padrão.",
+      "address": "Av João Luiz Faustino, 420\nJuquehy, São Sebastião - SP",
+      "rights": "© 2026 Vila Dolores. Todos os direitos reservados."
+    }
+  },
+  "hero": {
+    "subtitle": "SEU REFÚGIO PARTICULAR EM JUQUEHY",
+    "title": "Vila Dolores",
+    "headline_1": "House apartments em Juquehy:",
+    "headline_2": "conforto de casa, praticidade de loft",
+    "quote": "\"Nos anos 80, nossa avó Dolores nos trouxe pela primeira vez a Juquehy. Naquela época, a praia era um segredo bem guardado, com poucas casas e moradores. Décadas depois, transformamos essa memória em um espaço que celebra o acolhimento e o tempo em família e faz quem se hospeda aqui se sentir em casa, mesmo longe de casa.\"",
+    "cards": {
+      "location": "Ótima localização",
+      "beach_distance": "A 500m da praia",
+      "center_distance": "A 2 quadras do centro"
+    }
+  },
+  "about": {
+    "title": "HOUSE APARTMENTS",
+    "desc_1": "A Vila Dolores é um conjunto exclusivo de quatro house apartments que unem o conforto e a privacidade de uma casa à praticidade e funcionalidade de um loft moderno.",
+    "desc_2": "Cada unidade foi cuidadosamente projetada para oferecer ambientes amplos, equipados e acolhedores, que equilibram design e aconchego, ideais para quem busca dias de descanso e diversão com a família ou amigos.",
+    "desc_3": "Veja em \"Nossas Acomodações\" a configuração ideal para você!",
+    "beach_title": "A PRAIA",
+    "beach_desc_1": "Com mais de 3 km de extensão, Juquehy tem ampla faixa de areia branca e fina, um mar azul transparente e um pôr do sol que convida a ficar na praia.",
+    "beach_desc_2": "Do surf à tranquilidade de um banho de mar delicioso, a praia ainda atrai esportistas que gostam de correr, jogar bola, frescobol e andar de bike.",
+    "beach_desc_3": "Ambiente familiar que vai encantar você!"
+  },
+  "accommodations_intro": {
+    "title": "Veja qual a acomodação ideal para você!",
+    "description": "Explore as facilidades e configurações das nossas unidades. Cada uma oferece um espaço único para você relaxar e desfrutar de momentos especiais. Descubra as facilidades e os ambientes aconchegantes que preparamos para você. Navegue pela galeria de fotos e encontre o lugar perfeito para a sua estadia."
+  },
+  "general_info": {
+    "title": "Informações Gerais",
+    "location_label": "Localização:",
+    "location_desc": "a 500 metros da praia — dá pra ir caminhando tranquilamente",
+    "parking_label": "Estacionamento:",
+    "parking_desc": "1 vaga exclusiva por casa",
+    "wifi_label": "Conectividade:",
+    "wifi_desc": "Wi-Fi disponível em todas as unidades (ótimo para trabalho remoto ou streaming)",
+    "security_label": "Segurança:",
+    "security_desc": "área externa monitorada por câmeras 24h, fechadura com senha",
+    "shower_label": "Chuveirão:",
+    "shower_desc": "externo com lava-pés",
+    "schedule_label": "Horários:",
+    "schedule_desc": "Check-in: 15h / Check-out: 11h"
+  },
+  "location": {
+    "title": "ÓTIMA LOCALIZAÇÃO",
+    "description_1": "A Vila Dolores está localizada a 500 metros da praia, na entrada 3, e a duas quadras do centro comercial, a poucos passos de tudo o que você precisa.",
+    "description_2": "Supermercados, excelentes restaurantes, ótimas sorveterias, padarias, farmácias e shopping centers, sem tirar o carro da garagem."
+  },
+  "location_gallery": {
+    "title": "Tudo pertinho, a poucos passos da Vila",
+    "see_photo": "Ver Foto",
+    "items": {
+      "entrada": {
+        "name": "Entrada da Vila Dolores",
+        "desc": "A entrada charmosa da Vila Dolores"
+      },
+      "juquehy_shopping": {
+        "name": "Juquehy Shopping",
+        "desc": "Shopping a céu aberto com moda praia e boa gastronomia, desde 1998"
+      },
+      "bistro_juquehy": {
+        "name": "Bistrô Juquehy",
+        "desc": "Peixes, frutos do mar e doces caseiros com receita de vovó"
+      },
+      "gulero": {
+        "name": "Restaurante Gulero",
+        "desc": "Frutos do mar em um casarão histórico de 1867"
+      },
+      "parque_infantil": {
+        "name": "Parque Infantil",
+        "desc": "Espaço de diversão para a criançada"
+      },
+      "supermarket": {
+        "name": "Supermercado",
+        "desc": "Tudo que você precisa, sem sair do bairro"
+      },
+      "costa_azul": {
+        "name": "Costa Azul Supermercado",
+        "desc": "Supermercado tradicional da região, com mais de 30 anos de história"
+      },
+      "tua_rua": {
+        "name": "Loja Tua Rua",
+        "desc": "Loja de roupas pertinho de casa"
+      },
+      "monjolo": {
+        "name": "Shopping Monjolo",
+        "desc": "Lojas, gastronomia e serviços em um só lugar"
+      },
+      "freijo_pizza": {
+        "name": "Freijó Pizza Bar",
+        "desc": "Pizza artesanal no forno a lenha, para comer com as mãos"
+      },
+      "droga_center": {
+        "name": "Droga Center",
+        "desc": "Farmácia da região para o que você precisar"
+      },
+      "padaria": {
+        "name": "Padaria A Portuguesinha",
+        "desc": "Point de coxinha e pão de queijo fresquinho"
+      }
+    }
+  },
+  "map_section": {
+    "title": "CONFORTO E PRATICIDADE",
+    "desc_1": "a 500 metros da praia e próxima do centro comercial,",
+    "desc_2": "a poucos quarteirões de tudo o que você precisa:",
+    "desc_3": "supermercados, excelentes restaurantes, ótimas sorveterias,",
+    "desc_4": "padarias, farmácias e shopping centers."
+  },
+  "accommodations": {
+    "labels": {
+      "subtitle": "Nossas acomodações",
+      "ground": "térreo",
+      "superior": "superior",
+      "capacity": "Até {{count}} pessoas",
+      "size": "{{size}}m²",
+      "explore_details": "Explore os detalhes",
+      "beds_title": "Configuração dos ambientes"
+    },
+    "beds": {
+      "queen": "Cama Queen",
+      "box_queen": "Cama Box Queen",
+      "single": "Cama de Solteiro",
+      "double": "Cama de Casal",
+      "sofa_bed": "Sofá-cama Casal"
+    },
+    "rooms": {
+      "suite": "na suíte",
+      "bedroom": "no quarto",
+      "living": "na sala",
+      "mezzanine": "no mezanino"
+    },
+    "amenities": {
+      "air_conditioning_all": "Ar-condicionado em todos os cômodos",
+      "air_conditioning_environments": "Ar-condicionado em todos os ambientes",
+      "air_conditioning_rooms": "Ar-condicionado nos ambientes",
+      "kitchen_6": "Cozinha completa para 6 pessoas",
+      "kitchen_7": "Cozinha completa para 7 pessoas",
+      "kitchen_8": "Cozinha equipada para 8 pessoas",
+      "backyard": "Quintal privativo (8m²)",
+      "gourmet_patio": "Pátio gourmet privativo",
+      "gourmet_solarium": "Solarium gourmet privativo (20m²)",
+      "bbq_shower": "Churrasqueira e Chuveirão",
+      "rooftop_shower": "Chuveirão no Rooftop",
+      "exclusive_shower": "Chuveirão exclusivo",
+      "washer": "Lavanderia com máquina",
+      "beach_kit": "Kit praia (4 cadeiras + guarda-sol)",
+      "wifi": "Wi-Fi de alta velocidade",
+      "smart_tv": "Smart TV conectada",
+      "tv_mezzanine": "TV no Mezanino",
+      "garage": "1 Vaga de Garagem"
+    },
+    "casa_1": {
+      "name": "Casa 1",
+      "carousel_title": "Casa 1",
+      "carousel_specs": "térreo | Até 6 pessoas | 70m²",
+      "short_desc": "Acolhedora e prática — perfeita para famílias menores",
+      "full_desc": "A Casa 1, localizada no térreo, oferece toda a comodidade para quem quer chegar da praia, acomodar tudo com facilidade e aproveitar a casa sem subir escadas. Com 70 m², conta com cozinha e salas integradas em um ambiente amplo, além de dois quartos e banheiros que garantem praticidade e conforto para toda a família. O pequeno quintal privativo completa o espaço com um agradável respiro ao ar livre.",
+      "list": {
+        "suite": "1 suíte com cama queen",
+        "room": "1 quarto com 2 camas de solteiro e banheiro integrado",
+        "living": "Sala de jantar e estar com conceito aberto, sofá-cama casal e TV conectada",
+        "ac": "Ar-condicionado em todos os cômodos",
+        "kitchen": "Cozinha equipada com cooktop, geladeira, microondas e utensílios para 6 pessoas",
+        "backyard": "Pequeno quintal (8 m2)",
+        "washer": "Lavanderia com máquina de lavar",
+        "kit": "Kit praia: 4 cadeiras + guarda-sol"
+      },
+      "footer": "Perfeita para quem quer chegar, acomodar tudo direitinho e aproveitar o mar sem preocupações."
+    },
+    "casa_2": {
+      "name": "Casa 2",
+      "carousel_title": "Casa 2",
+      "carousel_specs": "térreo | Até 7 pessoas | 80m²",
+      "short_desc": "Um espaço amplo com pátio gourmet privativo — para curtir depois da praia.",
+      "full_desc": "A Casa 2, também localizada no térreo, tem como grande diferencial seu amplo pátio privativo, com estar, churrasqueira e chuveirão exclusivos. Além dos 70 m² de área interna, a casa ganha esse espaço de convivência ao ar livre, perfeito para reunir a família, preparar um churrasco, relaxar e aproveitar bons momentos juntos. Uma combinação gostosa entre o conforto e a praticidade dos ambientes internos e o prazer de ter uma área externa única.",
+      "list": {
+        "suite": "1 suíte com cama queen",
+        "room": "1 quarto com cama de casal + cama de solteiro e banheiro integrado",
+        "living": "Sala de jantar e estar com conceito aberto, sofá-cama casal e TV conectada",
+        "ac": "Ar-condicionado em todos os ambientes",
+        "kitchen": "Cozinha equipada com cooktop, geladeira, micro-ondas e utensílios para 7 pessoas",
+        "washer": "Lavanderia com máquina de lavar",
+        "patio": "Pátio gourmet privativo com churrasqueira",
+        "shower": "Chuveirão exclusivo",
+        "kit": "Kit praia: 4 cadeiras + guarda-sol"
+      },
+      "footer": "O ambiente perfeito para churrascos, risadas e bons momentos ao ar livre."
+    },
+    "casa_3": {
+      "name": "Casa 3",
+      "carousel_title": "Casa 3",
+      "carousel_specs": "superior | Até 8 pessoas | 100m²",
+      "short_desc": "Mais espaço em 2 andares, mais conforto e um solarium gourmet privativo.",
+      "full_desc": "A Casa 3 oferece o charme e a amplitude de uma residência duplex. No piso inferior, sala de estar, jantar e cozinha integradas dividem o espaço com dois quartos amplos, em mais de 70 m² de área interna. No andar superior, o mezanino cria um segundo ambiente de estar e dá acesso a um dos grandes diferenciais da casa: o solarium privativo de 20 m², com churrasqueira e chuveirão exclusivos. Um espaço especial para relaxar, reunir a família e aproveitar bons momentos ao ar livre, de dia ou à noite.",
+      "list": {
+        "suite": "1 suíte com cama queen",
+        "room": "1 quarto com 2 camas de solteiro e banheiro integrado",
+        "living": "Sala de jantar e estar com conceito aberto e sofá-cama casal",
+        "mezzanine": "Mezanino com TV conectada e sofá-cama casal",
+        "ac": "Ar-condicionado em todos os ambientes",
+        "kitchen": "Cozinha equipada com cooktop, geladeira, microondas e utensílios para 8 pessoas",
+        "washer": "Lavanderia com máquina de lavar",
+        "solarium": "Solarium gourmet de 20m² com chuveirão",
+        "kit": "Kit praia: 4 cadeiras + guarda-sol"
+      },
+      "footer": "O espaço ideal para quem quer conforto e a liberdade de aproveitar o dia e a noite no seu próprio rooftop."
+    },
+    "casa_4": {
+      "name": "Casa 4",
+      "carousel_title": "Casa 4",
+      "carousel_specs": "superior | Até 8 pessoas | 100m²",
+      "short_desc": "Mesma estrutura e charme da Casa 3, com um solário gourmet privativo.",
+      "full_desc": "A Casa 4 espelha a linda arquitetura duplex da Casa 3, com ambientes amplos e distribuídos em dois andares. No piso inferior, são mais de 70 m² com sala de estar, jantar e cozinha integradas, além de dois quartos confortáveis e dois banheiros. No andar superior, o mezanino amplia o espaço de convivência e se integra ao solarium privativo de 20 m², criando um verdadeiro rooftop para aproveitar ao ar livre. Uma casa perfeita para famílias ou grupos de amigos que valorizam conforto, amplitude e um espaço exclusivo para curtir sua estadia.",
+      "list": {
+        "suite": "1 suíte com cama queen",
+        "room": "1 quarto com 2 camas de solteiro e banheiro integrado",
+        "living": "Sala de jantar e estar com conceito aberto e sofá-cama casal",
+        "mezzanine": "Mezanino com TV conectada e sofá-cama casal",
+        "ac": "Ar-condicionado em todos os ambientes",
+        "kitchen": "Cozinha equipada com cooktop, geladeira, microondas e utensílios para 8 pessoas",
+        "washer": "Lavanderia com máquina de lavar",
+        "solarium": "Solário gourmet de 20m² com chuveirão",
+        "kit": "Kit praia: 4 cadeiras + guarda-sol"
+      },
+      "footer": "O espaço ideal para quem quer conforto e a liberdade de aproveitar o dia e a noite no seu próprio rooftop."
+    }
+  }
+}

@@ -1,167 +1,284 @@
+const baseUrl = import.meta.env.VITE_URL_CLOUDFLARE;
+
 export interface Amenity {
-  iconName: "wifi" | "tv" | "wind" | "coffee" | "waves" | "shield" | "sun" | "car" | "washer";
-  label: string;
+  iconName:
+    | "wifi"
+    | "tv"
+    | "wind"
+    | "coffee"
+    | "waves"
+    | "shield"
+    | "sun"
+    | "car"
+    | "washer";
+  labelKey: string;
 }
 
 export interface Bed {
-  type: string;
+  typeKey: string;
   quantity: number;
+  roomKey: string;
 }
 
 export interface Accommodation {
   id: string;
   name: string;
-  type: string;
+  typeKey: string;
   capacity: number;
   size: number;
-  shortDescription: string;
-  fullDescription: string;
+  shortDescriptionKey: string;
+  fullDescriptionKey: string;
   bedrooms: number;
   bathrooms: number;
   beds: Bed[];
   amenities: Amenity[];
   images: string[];
-  videoTourUrl: string; // URL do vídeo tour
   airbnbUrl: string;
   bookingUrl: string;
 }
 
 export const accommodationsData: Accommodation[] = [
   {
-    id: "areia",
-    name: "Areia",
-    type: "térreo",
+    id: "casa-1",
+    name: "Casa 1",
+    typeKey: "accommodations.labels.ground",
     capacity: 6,
     size: 70,
-    shortDescription: "Acolhedora e prática — perfeita para famílias menores",
-    fullDescription: "A Casa Areia, localizada no térreo, oferece a comodidade perfeita para quem quer chegar da praia, acomodar tudo rapidamente e desfrutar do ambiente sem subir escadas. O pequeno quintal integrado traz um respiro de ar livre e praticidade, ideal para momentos relaxantes após um banho de mar.",
+    shortDescriptionKey: "accommodations.casa_1.short_desc",
+    fullDescriptionKey: "accommodations.casa_1.full_desc",
     bedrooms: 2,
-    bathrooms: 2, // 1 da suite + 1 integrado
+    bathrooms: 2,
     beds: [
-      { type: "Cama Queen", quantity: 1 },
-      { type: "Cama de Solteiro", quantity: 2 },
-      { type: "Sofá-cama Casal", quantity: 1 }
+      { typeKey: "accommodations.beds.queen", quantity: 1, roomKey: "accommodations.rooms.suite" },
+      { typeKey: "accommodations.beds.single", quantity: 2, roomKey: "accommodations.rooms.bedroom" },
+      { typeKey: "accommodations.beds.sofa_bed", quantity: 1, roomKey: "accommodations.rooms.living" },
     ],
     amenities: [
-      { iconName: "wind", label: "Ar-condicionado em todos os cômodos" },
-      { iconName: "coffee", label: "Cozinha completa para 6 pessoas" },
-      { iconName: "sun", label: "Quintal privativo (8m²)" },
-      { iconName: "washer", label: "Lavanderia com máquina" },
-      { iconName: "waves", label: "Kit praia (4 cadeiras + guarda-sol)" },
-      { iconName: "wifi", label: "Wi-Fi de alta velocidade" },
-      { iconName: "tv", label: "Smart TV conectada" },
-      { iconName: "car", label: "1 Vaga de Garagem" }
+      {
+        iconName: "wind",
+        labelKey: "accommodations.amenities.air_conditioning_all",
+      },
+      { iconName: "coffee", labelKey: "accommodations.amenities.kitchen_6" },
+      { iconName: "sun", labelKey: "accommodations.amenities.backyard" },
+      { iconName: "washer", labelKey: "accommodations.amenities.washer" },
+      { iconName: "waves", labelKey: "accommodations.amenities.beach_kit" },
+      { iconName: "wifi", labelKey: "accommodations.amenities.wifi" },
+      { iconName: "tv", labelKey: "accommodations.amenities.smart_tv" },
+      { iconName: "car", labelKey: "accommodations.amenities.garage" },
     ],
     images: [
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1000&q=80"
+      `${baseUrl}/casa-1/suite1.webp`,
+      `${baseUrl}/casa-1/thumbs/sala0a.webp`,
+      `${baseUrl}/casa-1/thumbs/sala1a.webp`,
+      `${baseUrl}/casa-1/thumbs/sala1d.webp`,
+      `${baseUrl}/casa-1/thumbs/sala1h.webp`,
+      `${baseUrl}/casa-1/thumbs/sala1i.webp`,
+      `${baseUrl}/casa-1/thumbs/sala2.webp`,
+      `${baseUrl}/casa-1/thumbs/sala2a.webp`,
+      `${baseUrl}/casa-1/thumbs/sala2b.webp`,
+      `${baseUrl}/casa-1/thumbs/sala2c.webp`,
+      `${baseUrl}/casa-1/thumbs/sala9.webp`,
+      `${baseUrl}/casa-1/thumbs/sala9a.webp`,
+      `${baseUrl}/casa-1/thumbs/cozinha1.webp`,
+      `${baseUrl}/casa-1/thumbs/cozinha4.webp`,
+      `${baseUrl}/casa-1/thumbs/cozinha6.webp`,
+      `${baseUrl}/casa-1/thumbs/quarto2.webp`,
+      `${baseUrl}/casa-1/thumbs/quarto5.webp`,
+      `${baseUrl}/casa-1/thumbs/quarto7.webp`,
+      `${baseUrl}/casa-1/thumbs/suite1.webp`,
+      `${baseUrl}/casa-1/thumbs/suite2.webp`,
+      `${baseUrl}/casa-1/thumbs/suite3.webp`,
+      `${baseUrl}/casa-1/thumbs/suite6.webp`,
+      `${baseUrl}/casa-1/thumbs/lavanderia2.webp`,
+      `${baseUrl}/casa-1/thumbs/quintal2.webp`,
     ],
-    videoTourUrl: "https://www.w3schools.com/html/mov_bbb.mp4", // Placeholder
     airbnbUrl: "https://airbnb.com",
-    bookingUrl: "https://booking.com"
+    bookingUrl: "https://booking.com",
   },
   {
-    id: "mare",
-    name: "Maré",
-    type: "térreo",
+    id: "casa-2",
+    name: "Casa 2",
+    typeKey: "accommodations.labels.ground",
     capacity: 7,
     size: 80,
-    shortDescription: "Um espaço amplo com pátio gourmet privativo — para curtir depois da praia.",
-    fullDescription: "A Casa Maré é o térreo que eleva a experiência de convivência. O grande diferencial é o seu pátio gourmet privativo com churrasqueira e chuveirão exclusivo. É o ambiente definitivo para churrascos, risadas e bons momentos ao ar livre com quem você ama, unindo a funcionalidade do interior com a delícia da área externa.",
+    shortDescriptionKey: "accommodations.casa_2.short_desc",
+    fullDescriptionKey: "accommodations.casa_2.full_desc",
     bedrooms: 2,
     bathrooms: 2,
     beds: [
-      { type: "Cama Queen", quantity: 1 },
-      { type: "Cama de Casal", quantity: 1 },
-      { type: "Cama de Solteiro", quantity: 1 },
-      { type: "Sofá-cama Casal", quantity: 1 }
+      { typeKey: "accommodations.beds.queen", quantity: 1, roomKey: "accommodations.rooms.suite" },
+      { typeKey: "accommodations.beds.double", quantity: 1, roomKey: "accommodations.rooms.bedroom" },
+      { typeKey: "accommodations.beds.single", quantity: 1, roomKey: "accommodations.rooms.bedroom" },
+      { typeKey: "accommodations.beds.sofa_bed", quantity: 1, roomKey: "accommodations.rooms.living" },
     ],
     amenities: [
-      { iconName: "wind", label: "Ar-condicionado em todos os ambientes" },
-      { iconName: "coffee", label: "Cozinha completa para 7 pessoas" },
-      { iconName: "sun", label: "Pátio gourmet privativo" },
-      { iconName: "waves", label: "Churrasqueira e Chuveirão" },
-      { iconName: "washer", label: "Lavanderia com máquina" },
-      { iconName: "waves", label: "Kit praia (4 cadeiras + guarda-sol)" },
-      { iconName: "tv", label: "Smart TV conectada" },
-      { iconName: "car", label: "1 Vaga de Garagem" }
+      {
+        iconName: "wind",
+        labelKey: "accommodations.amenities.air_conditioning_environments",
+      },
+      { iconName: "coffee", labelKey: "accommodations.amenities.kitchen_7" },
+      { iconName: "sun", labelKey: "accommodations.amenities.gourmet_patio" },
+      { iconName: "waves", labelKey: "accommodations.amenities.bbq_shower" },
+      { iconName: "washer", labelKey: "accommodations.amenities.washer" },
+      { iconName: "waves", labelKey: "accommodations.amenities.beach_kit" },
+      { iconName: "tv", labelKey: "accommodations.amenities.smart_tv" },
+      { iconName: "car", labelKey: "accommodations.amenities.garage" },
     ],
     images: [
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80"
+      `${baseUrl}/casa-2/suite1-casa2.webp`,
+      `${baseUrl}/casa-2/thumbs/1a.webp`,
+      `${baseUrl}/casa-2/thumbs/1b.webp`,
+      `${baseUrl}/casa-2/thumbs/1c.webp`,
+      `${baseUrl}/casa-2/thumbs/sala1.webp`,
+      `${baseUrl}/casa-2/thumbs/sala2.webp`,
+      `${baseUrl}/casa-2/thumbs/sala3.webp`,
+      `${baseUrl}/casa-2/thumbs/sala3a.webp`,
+      `${baseUrl}/casa-2/thumbs/sala4.webp`,
+      `${baseUrl}/casa-2/thumbs/sala4a.webp`,
+      `${baseUrl}/casa-2/thumbs/cozinha1.webp`,
+      `${baseUrl}/casa-2/thumbs/quarto1.webp`,
+      `${baseUrl}/casa-2/thumbs/quarto2.webp`,
+      `${baseUrl}/casa-2/thumbs/quarto3.webp`,
+      `${baseUrl}/casa-2/thumbs/quarto4.webp`,
+      `${baseUrl}/casa-2/thumbs/suite1.webp`,
+      `${baseUrl}/casa-2/thumbs/suite2.webp`,
+      `${baseUrl}/casa-2/thumbs/suite2a.webp`,
+      `${baseUrl}/casa-2/thumbs/suite3.webp`,
+      `${baseUrl}/casa-2/thumbs/suite4.webp`,
+      `${baseUrl}/casa-2/thumbs/wc2.webp`,
+      `${baseUrl}/casa-2/thumbs/wcsuite1.webp`,
+      `${baseUrl}/casa-2/thumbs/lavanderia2.webp`,
+      `${baseUrl}/casa-2/thumbs/z.webp`,
     ],
-    videoTourUrl: "https://www.w3schools.com/html/mov_bbb.mp4", // Placeholder
     airbnbUrl: "https://airbnb.com",
-    bookingUrl: "https://booking.com"
+    bookingUrl: "https://booking.com",
   },
   {
-    id: "horizonte",
-    name: "Horizonte",
-    type: "superior",
+    id: "casa-3",
+    name: "Casa 3",
+    typeKey: "accommodations.labels.superior",
     capacity: 8,
-    size: 90,
-    shortDescription: "Mais espaço em 2 andares, mais conforto e um solarium gourmet privativo.",
-    fullDescription: "A Casa Horizonte oferece o requinte de uma residência duplex. No andar superior, você desfruta de um amplo mezanino que funciona como um segundo ambiente de estar. O ponto alto da casa é o impressionante solarium gourmet de 20m², garantindo total privacidade para curtir a liberdade do seu próprio rooftop, de dia ou de noite.",
+    size: 100,
+    shortDescriptionKey: "accommodations.casa_3.short_desc",
+    fullDescriptionKey: "accommodations.casa_3.full_desc",
     bedrooms: 2,
     bathrooms: 2,
     beds: [
-      { type: "Cama Box Queen", quantity: 1 },
-      { type: "Cama de Solteiro", quantity: 2 },
-      { type: "Sofá-cama Casal", quantity: 2 } // 1 sala, 1 mezanino
+      { typeKey: "accommodations.beds.queen", quantity: 1, roomKey: "accommodations.rooms.suite" },
+      { typeKey: "accommodations.beds.single", quantity: 2, roomKey: "accommodations.rooms.bedroom" },
+      { typeKey: "accommodations.beds.sofa_bed", quantity: 1, roomKey: "accommodations.rooms.living" },
+      { typeKey: "accommodations.beds.sofa_bed", quantity: 1, roomKey: "accommodations.rooms.mezzanine" },
     ],
     amenities: [
-      { iconName: "wind", label: "Ar-condicionado nos ambientes" },
-      { iconName: "coffee", label: "Cozinha equipada para 8 pessoas" },
-      { iconName: "sun", label: "Solarium gourmet privativo (20m²)" },
-      { iconName: "waves", label: "Chuveirão no Rooftop" },
-      { iconName: "washer", label: "Lavanderia com máquina" },
-      { iconName: "waves", label: "Kit praia (4 cadeiras + guarda-sol)" },
-      { iconName: "tv", label: "TV no Mezanino e Sala" },
-      { iconName: "car", label: "1 Vaga de Garagem" }
+      {
+        iconName: "wind",
+        labelKey: "accommodations.amenities.air_conditioning_rooms",
+      },
+      { iconName: "coffee", labelKey: "accommodations.amenities.kitchen_8" },
+      {
+        iconName: "sun",
+        labelKey: "accommodations.amenities.gourmet_solarium",
+      },
+      {
+        iconName: "waves",
+        labelKey: "accommodations.amenities.rooftop_shower",
+      },
+      { iconName: "washer", labelKey: "accommodations.amenities.washer" },
+      { iconName: "waves", labelKey: "accommodations.amenities.beach_kit" },
+      { iconName: "tv", labelKey: "accommodations.amenities.tv_mezzanine" },
+      { iconName: "car", labelKey: "accommodations.amenities.garage" },
     ],
     images: [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1000&q=80"
+      `${baseUrl}/casa-3/suite-casa-3.webp`,
+      `${baseUrl}/casa-3/thumbs/1b.webp`,
+      `${baseUrl}/casa-3/thumbs/sala1.webp`,
+      `${baseUrl}/casa-3/thumbs/sala2.webp`,
+      `${baseUrl}/casa-3/thumbs/sala2a.webp`,
+      `${baseUrl}/casa-3/thumbs/sala3.webp`,
+      `${baseUrl}/casa-3/thumbs/sala7.webp`,
+      `${baseUrl}/casa-3/thumbs/sala8.webp`,
+      `${baseUrl}/casa-3/thumbs/cozinha1.webp`,
+      `${baseUrl}/casa-3/thumbs/cozinha4.webp`,
+      `${baseUrl}/casa-3/thumbs/cozinha5.webp`,
+      `${baseUrl}/casa-3/thumbs/cozinha6.webp`,
+      `${baseUrl}/casa-3/thumbs/escada%20mezanino.webp`,
+      `${baseUrl}/casa-3/thumbs/mezanino1.webp`,
+      `${baseUrl}/casa-3/thumbs/mezanino2.webp`,
+      `${baseUrl}/casa-3/thumbs/mezanino3.webp`,
+      `${baseUrl}/casa-3/thumbs/mezanino4.webp`,
+      `${baseUrl}/casa-3/thumbs/quarto1.webp`,
+      `${baseUrl}/casa-3/thumbs/quarto2a.webp`,
+      `${baseUrl}/casa-3/thumbs/quarto3.webp`,
+      `${baseUrl}/casa-3/thumbs/quarto3a.webp`,
+      `${baseUrl}/casa-3/thumbs/quarto4.webp`,
+      `${baseUrl}/casa-3/thumbs/lavanderia1.webp`,
+      `${baseUrl}/casa-3/thumbs/sol%C3%A1rio1.webp`,
     ],
-    videoTourUrl: "https://www.w3schools.com/html/mov_bbb.mp4", // Placeholder
     airbnbUrl: "https://airbnb.com",
-    bookingUrl: "https://booking.com"
+    bookingUrl: "https://booking.com",
   },
   {
-    id: "brisa",
-    name: "Brisa",
-    type: "superior",
+    id: "casa-4",
+    name: "Casa 4",
+    typeKey: "accommodations.labels.superior",
     capacity: 8,
-    size: 90,
-    shortDescription: "Mesma estrutura e charme da Casa Horizonte, com um solário gourmet privativo.",
-    fullDescription: "A Casa Brisa espelha a arquitetura deslumbrante da Casa Horizonte. Com ambientes divididos em dois andares, ela possui o charme do mezanino e o luxo do solarium gourmet privativo de 20m². É o espaço ideal para famílias maiores ou grupos de amigos que não abrem mão de conforto, brisa fresca e um rooftop exclusivo em Juquehy.",
+    size: 100,
+    shortDescriptionKey: "accommodations.casa_4.short_desc",
+    fullDescriptionKey: "accommodations.casa_4.full_desc",
     bedrooms: 2,
     bathrooms: 2,
     beds: [
-      { type: "Cama Box Queen", quantity: 1 },
-      { type: "Cama de Solteiro", quantity: 2 },
-      { type: "Sofá-cama Casal", quantity: 2 } // 1 sala, 1 mezanino
+      { typeKey: "accommodations.beds.queen", quantity: 1, roomKey: "accommodations.rooms.suite" },
+      { typeKey: "accommodations.beds.single", quantity: 2, roomKey: "accommodations.rooms.bedroom" },
+      { typeKey: "accommodations.beds.sofa_bed", quantity: 1, roomKey: "accommodations.rooms.living" },
+      { typeKey: "accommodations.beds.sofa_bed", quantity: 1, roomKey: "accommodations.rooms.mezzanine" },
     ],
     amenities: [
-      { iconName: "wind", label: "Ar-condicionado nos ambientes" },
-      { iconName: "coffee", label: "Cozinha equipada para 8 pessoas" },
-      { iconName: "sun", label: "Solarium gourmet privativo (20m²)" },
-      { iconName: "waves", label: "Chuveirão no Rooftop" },
-      { iconName: "washer", label: "Lavanderia com máquina" },
-      { iconName: "waves", label: "Kit praia (4 cadeiras + guarda-sol)" },
-      { iconName: "tv", label: "TV no Mezanino e Sala" },
-      { iconName: "car", label: "1 Vaga de Garagem" }
+      {
+        iconName: "wind",
+        labelKey: "accommodations.amenities.air_conditioning_rooms",
+      },
+      { iconName: "coffee", labelKey: "accommodations.amenities.kitchen_8" },
+      {
+        iconName: "sun",
+        labelKey: "accommodations.amenities.gourmet_solarium",
+      },
+      {
+        iconName: "waves",
+        labelKey: "accommodations.amenities.rooftop_shower",
+      },
+      { iconName: "washer", labelKey: "accommodations.amenities.washer" },
+      { iconName: "waves", labelKey: "accommodations.amenities.beach_kit" },
+      { iconName: "tv", labelKey: "accommodations.amenities.tv_mezzanine" },
+      { iconName: "car", labelKey: "accommodations.amenities.garage" },
     ],
     images: [
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80"
+      `${baseUrl}/casa-4/suite4-casa-4.webp`,
+      `${baseUrl}/casa-4/thumbs/1b.webp`,
+      `${baseUrl}/casa-4/thumbs/sala1.webp`,
+      `${baseUrl}/casa-4/thumbs/sala2.webp`,
+      `${baseUrl}/casa-4/thumbs/sala3.webp`,
+      `${baseUrl}/casa-4/thumbs/sala3a.webp`,
+      `${baseUrl}/casa-4/thumbs/sala4.webp`,
+      `${baseUrl}/casa-4/thumbs/sala5.webp`,
+      `${baseUrl}/casa-4/thumbs/sala6.webp`,
+      `${baseUrl}/casa-4/thumbs/sala8.webp`,
+      `${baseUrl}/casa-4/thumbs/sala9.webp`,
+      `${baseUrl}/casa-4/thumbs/cozinha1.webp`,
+      `${baseUrl}/casa-4/thumbs/cozinha3.webp`,
+      `${baseUrl}/casa-4/thumbs/escada%20mezanino.webp`,
+      `${baseUrl}/casa-4/thumbs/mezanino1.webp`,
+      `${baseUrl}/casa-4/thumbs/mezanino3.webp`,
+      `${baseUrl}/casa-4/thumbs/mezanino4.webp`,
+      `${baseUrl}/casa-4/thumbs/quarto.webp`,
+      `${baseUrl}/casa-4/thumbs/quarto1.webp`,
+      `${baseUrl}/casa-4/thumbs/quarto2.webp`,
+      `${baseUrl}/casa-4/thumbs/quarto3.webp`,
+      `${baseUrl}/casa-4/thumbs/lavanderia2.webp`,
+      `${baseUrl}/casa-4/thumbs/solario1.webp`,
+      `${baseUrl}/casa-4/thumbs/solario2.webp`,
     ],
-    videoTourUrl: "https://www.w3schools.com/html/mov_bbb.mp4", // Placeholder
     airbnbUrl: "https://airbnb.com",
-    bookingUrl: "https://booking.com"
-  }
+    bookingUrl: "https://booking.com",
+  },
 ];
