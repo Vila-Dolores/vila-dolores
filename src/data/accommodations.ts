@@ -33,6 +33,7 @@ export interface Accommodation {
   beds: Bed[];
   amenities: Amenity[];
   images: string[];
+  video?: string;
   airbnbUrl: string;
   bookingUrl: string;
 }
@@ -92,6 +93,7 @@ export const accommodationsData: Accommodation[] = [
       `${baseUrl}/casa-1/thumbs/lavanderia2.webp`,
       `${baseUrl}/casa-1/thumbs/quintal2.webp`,
     ],
+    video: `${baseUrl}/casa-1/videos/casa-1.mp4`,
     airbnbUrl: "https://airbnb.com",
     bookingUrl: "https://booking.com",
   },
@@ -150,6 +152,7 @@ export const accommodationsData: Accommodation[] = [
       `${baseUrl}/casa-2/thumbs/lavanderia2.webp`,
       `${baseUrl}/casa-2/thumbs/z.webp`,
     ],
+    video: `${baseUrl}/casa-2/videos/casa-2.mp4`,
     airbnbUrl: "https://airbnb.com",
     bookingUrl: "https://booking.com",
   },
@@ -214,6 +217,7 @@ export const accommodationsData: Accommodation[] = [
       `${baseUrl}/casa-3/thumbs/lavanderia1.webp`,
       `${baseUrl}/casa-3/thumbs/sol%C3%A1rio1.webp`,
     ],
+    video: `${baseUrl}/casa-3/videos/casa-3.mp4`,
     airbnbUrl: "https://airbnb.com",
     bookingUrl: "https://booking.com",
   },
@@ -278,6 +282,7 @@ export const accommodationsData: Accommodation[] = [
       `${baseUrl}/casa-4/thumbs/solario1.webp`,
       `${baseUrl}/casa-4/thumbs/solario2.webp`,
     ],
+    video: `${baseUrl}/casa-4/videos/casa-4.mp4`,
     airbnbUrl: "https://airbnb.com",
     bookingUrl: "https://booking.com",
   },

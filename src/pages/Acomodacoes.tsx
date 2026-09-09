@@ -19,11 +19,33 @@ import {
   ChevronRight
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { accommodationsData } from "../data/accommodations";
+import { accommodationsData, type Accommodation } from "../data/accommodations";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { FloatingMenu } from "../components/layout/FloatingMenu";
 import { GeneralInfoSection } from "../components/sections/GeneralInfoSection";
+
+type GalleryMedia =
+  | {
+      type: "video";
+      src: string;
+    }
+  | {
+      type: "image";
+      src: string;
+    };
+
+const getGalleryMedia = (accommodation: Accommodation): GalleryMedia[] => [
+  ...(accommodation.video
+    ? [
+        {
+          type: "video" as const,
+          src: accommodation.video,
+        },
+      ]
+    : []),
+  ...accommodation.images.map((src) => ({ type: "image" as const, src })),
+];
 
 const iconMap = {
   wifi: Wifi,
@@ -40,12 +62,33 @@ export function Acomodacoes() {
   const { t } = useTranslation();
   const { hash, search } = useLocation();
   const [activeVideoUrl, setActiveVideoUrl] = useState<string | null>(null);
-  const [activeGallery, setActiveGallery] = useState<string[] | null>(null);
+  const [activeGallery, setActiveGallery] = useState<GalleryMedia[] | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
-    const element = hash ? document.getElementById(hash.replace("#", "")) : null;
-    
+    if (!activeVideoUrl && !activeGallery) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [activeVideoUrl, activeGallery]);
+
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+      });
+
+      return;
+    }
+
+    const element = document.getElementById(hash.replace("#", ""));
+
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -58,9 +101,8 @@ export function Acomodacoes() {
     const acc = accommodationsData.find((a) => a.id === galleryId);
     
     if (acc) {
-      setActiveGallery(acc.images);
+      setActiveGallery(getGalleryMedia(acc));
       setCurrentImageIndex(0);
-      document.body.style.overflow = "hidden";
     }
   }, [search]);
 
@@ -74,30 +116,30 @@ export function Acomodacoes() {
     const prevIndex = (currentImageIndex - 1 + activeGallery.length) % activeGallery.length;
 
     [nextIndex, prevIndex].forEach((index) => {
+      const media = activeGallery[index];
+
+      if (media.type !== "image") return;
+
       const preloadImg = new Image();
-      preloadImg.src = activeGallery[index];
+      preloadImg.src = media.src;
     });
   }, [activeGallery, currentImageIndex]);
 
   const openVideoModal = (url: string) => {
     setActiveVideoUrl(url);
-    document.body.style.overflow = "hidden";
   };
 
   const closeVideoModal = () => {
     setActiveVideoUrl(null);
-    document.body.style.overflow = "unset";
   };
 
-  const openGallery = (images: string[]) => {
-    setActiveGallery(images);
+  const openGallery = (accommodation: Accommodation) => {
+    setActiveGallery(getGalleryMedia(accommodation));
     setCurrentImageIndex(0);
-    document.body.style.overflow = "hidden";
   };
 
   const closeGallery = () => {
     setActiveGallery(null);
-    document.body.style.overflow = "unset";
   };
 
   const nextImage = () => {
@@ -112,22 +154,16 @@ export function Acomodacoes() {
     }
   };
 
+  const currentMedia = activeGallery?.[currentImageIndex];
+
   return (
     <div className="relative size-full bg-[#FAF9F6] font-sans">
       <section className="relative flex min-h-[85vh] w-full flex-col overflow-hidden bg-[#304439] md:min-h-[90vh]">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <img
+          src={`${baseUrl}/praia/IMG_8906.webp`}
+          alt=""
           className="absolute inset-0 h-full w-full object-cover scale-[1.05] blur-sm"
-          poster={`${baseUrl}/praia/IMG_8906.webp`}
-        >
-          <source
-            src="https://cdn.pixabay.com/video/2019/04/24/22998-332483011_large.mp4"
-            type="video/mp4"
-          />
-        </video>
+        />
 
         <div className="absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-t from-[#FAF9F6] to-transparent md:h-48" />
 
@@ -142,7 +178,7 @@ export function Acomodacoes() {
           </p>
 
           <button 
-            onClick={() => openVideoModal("https://www.youtube.com/embed/WIfiR1yENi8?autoplay=1&modestbranding=1&rel=0")}
+            onClick={() => openVideoModal(`${baseUrl}/area-externa/videos/geral.mp4`)}
             className="mt-12 flex items-center gap-3 rounded-full bg-[#FAF9F6] px-8 py-4 text-sm font-bold text-[#304439] shadow-2xl transition hover:scale-105 hover:bg-[#FFD2A2]"
           >
             <Play className="h-5 w-5 fill-current" />
@@ -169,7 +205,7 @@ export function Acomodacoes() {
                 <div className="w-full flex-1">
                   <div 
                     className="group relative h-[450px] cursor-pointer overflow-hidden rounded-3xl shadow-2xl md:h-[650px]"
-                    onClick={() => openGallery(acc.images)}
+                    onClick={() => openGallery(acc)}
                   >
                     <img
                       src={acc.images[0]}
@@ -271,7 +307,7 @@ export function Acomodacoes() {
       <FloatingMenu />
 
       {activeVideoUrl && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/95 p-4 backdrop-blur-md md:p-12">
+        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/95 p-4 md:p-12">
           <button
             onClick={closeVideoModal}
             className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition hover:scale-110 hover:bg-[#FFD2A2] hover:text-[#304439]"
@@ -280,19 +316,21 @@ export function Acomodacoes() {
           </button>
           
           <div className="relative aspect-video w-full max-w-6xl overflow-hidden rounded-2xl bg-black shadow-2xl">
-            <iframe
+            <video
               src={activeVideoUrl}
               title="Vila Dolores Video Tour"
               className="absolute inset-0 h-full w-full border-0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
+              controls
+              autoPlay
+              playsInline
+              preload="none"
             />
           </div>
         </div>
       )}
 
-      {activeGallery && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm md:p-12">
+      {activeGallery && currentMedia && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/95 p-4 md:p-12">
           <button
             onClick={closeGallery}
             className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition hover:scale-110 hover:bg-[#FFD2A2] hover:text-[#304439]"
@@ -307,11 +345,23 @@ export function Acomodacoes() {
             <ChevronLeft className="h-12 w-12" />
           </button>
           
-          <img
-            src={activeGallery[currentImageIndex]}
-            alt={`Galeria ${currentImageIndex + 1}`}
-            className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
-          />
+          {currentMedia.type === "video" ? (
+            <video
+              key={currentMedia.src}
+              src={currentMedia.src}
+              controls
+              autoPlay
+              playsInline
+              preload="auto"
+              className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
+            />
+          ) : (
+            <img
+              src={currentMedia.src}
+              alt={`Galeria ${currentImageIndex + 1}`}
+              className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
+            />
+          )}
           
           <button
             onClick={nextImage}
