@@ -77,8 +77,18 @@ export function Acomodacoes() {
   }, [activeVideoUrl, activeGallery]);
 
   useEffect(() => {
-    const element = hash ? document.getElementById(hash.replace("#", "")) : null;
-    
+    if (!hash) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+      });
+
+      return;
+    }
+
+    const element = document.getElementById(hash.replace("#", ""));
+
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
