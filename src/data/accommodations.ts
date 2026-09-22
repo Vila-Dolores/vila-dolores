@@ -68,11 +68,10 @@ export const accommodationsData: Accommodation[] = [
       { iconName: "car", labelKey: "accommodations.amenities.garage" },
     ],
     images: [
-      `${baseUrl}/casa-1/suite1.webp`,
+      `${baseUrl}/casa-1/sala1h.webp`,
       `${baseUrl}/casa-1/thumbs/sala0a.webp`,
       `${baseUrl}/casa-1/thumbs/sala1a.webp`,
       `${baseUrl}/casa-1/thumbs/sala1d.webp`,
-      `${baseUrl}/casa-1/thumbs/sala1h.webp`,
       `${baseUrl}/casa-1/thumbs/sala1i.webp`,
       `${baseUrl}/casa-1/thumbs/sala2.webp`,
       `${baseUrl}/casa-1/thumbs/sala2a.webp`,
@@ -127,7 +126,7 @@ export const accommodationsData: Accommodation[] = [
       { iconName: "car", labelKey: "accommodations.amenities.garage" },
     ],
     images: [
-      `${baseUrl}/casa-2/suite1-casa2.webp`,
+      `${baseUrl}/casa-2/sala4.webp`,
       `${baseUrl}/casa-2/thumbs/1a.webp`,
       `${baseUrl}/casa-2/thumbs/1b.webp`,
       `${baseUrl}/casa-2/thumbs/1c.webp`,
@@ -135,7 +134,6 @@ export const accommodationsData: Accommodation[] = [
       `${baseUrl}/casa-2/thumbs/sala2.webp`,
       `${baseUrl}/casa-2/thumbs/sala3.webp`,
       `${baseUrl}/casa-2/thumbs/sala3a.webp`,
-      `${baseUrl}/casa-2/thumbs/sala4.webp`,
       `${baseUrl}/casa-2/thumbs/sala4a.webp`,
       `${baseUrl}/casa-2/thumbs/cozinha1.webp`,
       `${baseUrl}/casa-2/thumbs/quarto1.webp`,
@@ -192,7 +190,7 @@ export const accommodationsData: Accommodation[] = [
       { iconName: "car", labelKey: "accommodations.amenities.garage" },
     ],
     images: [
-      `${baseUrl}/casa-3/suite-casa-3.webp`,
+      `${baseUrl}/casa-3/sol%C3%A1rio1.webp`,
       `${baseUrl}/casa-3/thumbs/1b.webp`,
       `${baseUrl}/casa-3/thumbs/sala1.webp`,
       `${baseUrl}/casa-3/thumbs/sala2.webp`,
@@ -257,7 +255,7 @@ export const accommodationsData: Accommodation[] = [
       { iconName: "car", labelKey: "accommodations.amenities.garage" },
     ],
     images: [
-      `${baseUrl}/casa-4/suite4-casa-4.webp`,
+      `${baseUrl}/casa-4/solario1.webp`,
       `${baseUrl}/casa-4/thumbs/1b.webp`,
       `${baseUrl}/casa-4/thumbs/sala1.webp`,
       `${baseUrl}/casa-4/thumbs/sala2.webp`,

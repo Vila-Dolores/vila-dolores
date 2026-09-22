@@ -11,7 +11,7 @@ export function AboutSection() {
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
           <div className="relative h-[400px] w-full overflow-hidden rounded-xl md:h-[500px]">
             <img
-              src={`${baseUrl}/area-externa/entrada-logo-ia.webp`}
+              src={`${baseUrl}/area-externa/entrada-longe.webp`}
               alt="House Apartments"
               className="h-full w-full object-cover"
             />

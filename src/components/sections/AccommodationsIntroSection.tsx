@@ -11,7 +11,7 @@ export function AccommodationsIntroSection() {
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-0 px-8 md:flex-row md:px-16">
         <div className="relative h-[400px] w-full flex-1 overflow-hidden shadow-2xl md:h-[550px]">
           <img
-            src={`${baseUrl}/area-externa/entrada-longe.webp`}
+            src={`${baseUrl}/area-externa/entrada-logo-ia.webp`}
             alt="Facilidades das acomodações"
             className="h-full w-full object-cover"
           />
