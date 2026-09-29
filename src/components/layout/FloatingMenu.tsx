@@ -18,7 +18,7 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent
   WHATSAPP_MESSAGE,
 )}`;
 
-const INSTAGRAM_URL = "https://ig.me/m/viladolores.juquehy";
+const INSTAGRAM_URL = "https://www.instagram.com/viladolores.juquehy/";
 
 export function FloatingMenu() {
   const [isVisible, setIsVisible] = useState(true);
@@ -74,7 +74,7 @@ export function FloatingMenu() {
               </div>
             </a>
 
-            <a
+            {/*<a
               href="https://airbnb.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -88,7 +88,7 @@ export function FloatingMenu() {
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#304439] text-[#FFD2A2] shadow-lg">
                 <Home className="h-5 w-5" />
               </div>
-            </a>
+            </a>*/}
 
             <a
               href="https://booking.com"
@@ -157,17 +157,17 @@ export function FloatingMenu() {
           {t("common.navigation.location")}
         </a>
 
-        <a
+        {/*<a
           href="https://airbnb.com"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-4 font-sans text-sm font-medium text-[#FFD2A2] transition hover:bg-[#FFD2A2]/10"
         >
           {t("common.navigation.airbnb")}
-        </a>
+        </a>*/}
 
         <a
-          href="https://booking.com"
+          href="https://www.booking.com/hotel/br/4-casas-vila-dolores-na-charmosa-praia-de-juquehy.pt-br.html"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-4 font-sans text-sm font-medium text-[#FFD2A2] transition hover:bg-[#FFD2A2]/10"

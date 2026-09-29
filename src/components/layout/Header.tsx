@@ -89,14 +89,14 @@ export function Header() {
             >
               {t("common.navigation.location")}
             </a>
-            <a
+            {/*<a
               href="https://airbnb.com"
               target="_blank"
               rel="noreferrer"
               className="font-sans text-sm font-medium text-white/90"
             >
               {t("common.navigation.airbnb")}
-            </a>
+            </a>*/}
             <a
               href="https://booking.com"
               target="_blank"
