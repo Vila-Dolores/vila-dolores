@@ -279,14 +279,14 @@ export function Acomodacoes() {
                   </div>
 
                   <div className="mt-auto flex flex-wrap gap-4">
-                    <a
+                    {/*<a
                       href={acc.airbnbUrl}
                       target="_blank"
                       rel="noreferrer"
                       className="rounded-xl bg-[#304439] px-8 py-4 font-bold text-[#FFD2A2] transition hover:brightness-110"
                     >
                       {t("common.buttons.book_airbnb")}
-                    </a>
+                    </a>*/}
                     <a
                       href={acc.bookingUrl}
                       target="_blank"

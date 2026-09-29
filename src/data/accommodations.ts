@@ -94,7 +94,7 @@ export const accommodationsData: Accommodation[] = [
     ],
     video: `${baseUrl}/casa-1/videos/casa-1.mp4`,
     airbnbUrl: "https://airbnb.com",
-    bookingUrl: "https://booking.com",
+    bookingUrl: "https://www.booking.com/hotel/br/4-casas-vila-dolores-na-charmosa-praia-de-juquehy.pt-br.html?chal_t=1790647980286&force_referer=#RD1727621101",
   },
   {
     id: "casa-2",
@@ -152,7 +152,7 @@ export const accommodationsData: Accommodation[] = [
     ],
     video: `${baseUrl}/casa-2/videos/casa-2.mp4`,
     airbnbUrl: "https://airbnb.com",
-    bookingUrl: "https://booking.com",
+    bookingUrl: "https://www.booking.com/hotel/br/4-casas-vila-dolores-na-charmosa-praia-de-juquehy.pt-br.html?chal_t=1790647980286&force_referer=#RD1727621102",
   },
   {
     id: "casa-3",
@@ -217,7 +217,7 @@ export const accommodationsData: Accommodation[] = [
     ],
     video: `${baseUrl}/casa-3/videos/casa-3.mp4`,
     airbnbUrl: "https://airbnb.com",
-    bookingUrl: "https://booking.com",
+    bookingUrl: "https://www.booking.com/hotel/br/4-casas-vila-dolores-na-charmosa-praia-de-juquehy.pt-br.html?chal_t=1790647980286&force_referer=#RD1727621102",
   },
   {
     id: "casa-4",
@@ -282,6 +282,6 @@ export const accommodationsData: Accommodation[] = [
     ],
     video: `${baseUrl}/casa-4/videos/casa-4.mp4`,
     airbnbUrl: "https://airbnb.com",
-    bookingUrl: "https://booking.com",
+    bookingUrl: "https://www.booking.com/hotel/br/4-casas-vila-dolores-na-charmosa-praia-de-juquehy.pt-br.html?chal_t=1790647980286&force_referer=#RD1727621104",
   },
 ];
