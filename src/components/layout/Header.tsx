@@ -1,9 +1,10 @@
-const baseUrl = import.meta.env.VITE_URL_CLOUDFLARE;
 import { X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "../common/LanguageSwitcher";
+
+const baseUrl = import.meta.env.VITE_URL_CLOUDFLARE;
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,6 +12,20 @@ export function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const menuRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
+
+  const { pathname } = useLocation();
+
+  const isAccommodationsPage =
+    pathname === "/acomodacoes" || pathname.startsWith("/acomodacoes/");
+
+  const WHATSAPP_NUMBER = "5511940891848";
+
+  const WHATSAPP_MESSAGE =
+    "Olá! Vim pelo site da Vila Dolores e gostaria de saber mais sobre as hospedagens.";
+
+  const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    WHATSAPP_MESSAGE,
+  )}`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,7 +58,7 @@ export function Header() {
   }, []);
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 z-50 flex w-full items-start justify-between px-6 py-6 transition-transform duration-500 ease-in-out md:absolute md:px-8 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
       onMouseEnter={() => setIsVisible(true)}
     >
@@ -117,7 +132,10 @@ export function Header() {
       </div>
 
       <div className="flex h-20 w-32 max-w-full items-center justify-center md:absolute md:left-1/2 md:top-0 md:h-32 md:w-48 md:-translate-x-1/2 md:translate-y-4 lg:h-48 lg:w-64">
-        <Link to="/" className="block h-full w-full transition hover:opacity-80">
+        <Link
+          to="/"
+          className="block h-full w-full transition hover:opacity-80"
+        >
           <img
             src={`${baseUrl}/brand/logo-original.webp`}
             alt="Vila Dolores"
@@ -129,12 +147,23 @@ export function Header() {
       <div className="flex items-center gap-3">
         <LanguageSwitcher />
 
-        <Link
-          to="/acomodacoes"
-          className="rounded-md bg-[#FFD2A2] px-4 py-2 font-sans text-xs font-bold text-[#304439] transition hover:brightness-110 md:px-6 md:py-3 md:text-sm"
-        >
-          {t("common.buttons.reserve")}
-        </Link>
+        {isAccommodationsPage ? (
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-md bg-[#FFD2A2] px-4 py-2 font-sans text-xs font-bold text-[#304439] transition hover:brightness-110 md:px-6 md:py-3 md:text-sm"
+          >
+            {t("common.buttons.reserve")}
+          </a>
+        ) : (
+          <Link
+            to="/acomodacoes"
+            className="rounded-md bg-[#FFD2A2] px-4 py-2 font-sans text-xs font-bold text-[#304439] transition hover:brightness-110 md:px-6 md:py-3 md:text-sm"
+          >
+            {t("common.buttons.reserve")}
+          </Link>
+        )}
       </div>
     </header>
   );
