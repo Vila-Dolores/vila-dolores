@@ -91,7 +91,7 @@ export function FloatingMenu() {
             </a>*/}
 
             <a
-              href="https://booking.com"
+              href="https://www.booking.com/hotel/br/4-casas-vila-dolores-na-charmosa-praia-de-juquehy.pt-br.html"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3"
